@@ -316,63 +316,6 @@ nav{
 .testimonial-author{font-size:13px;color:var(--muted);}
 .testimonial-author strong{color:var(--ink);font-weight:500;}
 
-/* ── CONTACT FORM ── */
-.contact-section{padding:80px 48px;max-width:1100px;margin:0 auto;}
-.contact-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:48px;align-items:start;margin-top:48px;}
-.contact-info h3{font-family:'DM Serif Display',serif;font-size:24px;margin-bottom:16px;}
-.contact-info p{font-size:14px;color:var(--muted);line-height:1.75;margin-bottom:24px;}
-.contact-detail{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
-.contact-detail-icon{
-  width:40px;height:40px;border-radius:12px;
-  background:var(--soft);border:1px solid var(--border);
-  display:flex;align-items:center;justify-content:center;
-  font-size:18px;flex-shrink:0;
-}
-.contact-detail-text{font-size:13px;color:var(--muted);}
-.contact-detail-text strong{display:block;font-size:14px;color:var(--ink);font-weight:500;margin-bottom:2px;}
-.contact-form{
-  background:var(--card);border:1px solid var(--border);
-  border-radius:20px;padding:36px;
-}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-.form-group{margin-bottom:18px;}
-.form-group label{
-  display:block;font-size:12px;font-weight:500;
-  color:var(--muted);margin-bottom:6px;
-  letter-spacing:.3px;text-transform:uppercase;
-}
-.form-group input,
-.form-group select,
-.form-group textarea{
-  width:100%;padding:12px 16px;
-  border:1px solid var(--border);border-radius:12px;
-  font-family:'DM Sans',sans-serif;font-size:14px;
-  color:var(--ink);background:var(--white);
-  transition:.2s;outline:none;
-}
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus{
-  border-color:var(--accent);
-  box-shadow:0 0 0 3px rgba(45,106,79,.08);
-}
-.form-group textarea{resize:vertical;min-height:120px;}
-.form-group select{appearance:none;cursor:pointer;}
-.form-submit{
-  width:100%;padding:14px;border-radius:100px;
-  background:var(--ink);color:var(--white);
-  border:none;font-family:'DM Sans',sans-serif;
-  font-size:14px;font-weight:500;cursor:pointer;
-  transition:.2s;margin-top:4px;
-}
-.form-submit:hover{background:var(--accent);transform:translateY(-1px);}
-.form-success{
-  display:none;text-align:center;padding:24px;
-  background:#e8f5e9;border-radius:14px;
-  color:#1b4332;font-size:14px;margin-top:16px;
-}
-.form-success.show{display:block;}
-
 /* ── CTA SECTION ── */
 .cta-section{
   margin:0 48px 80px;
@@ -414,6 +357,65 @@ footer{
 .footer-links a:hover{color:var(--ink);}
 .footer-copy{font-size:12px;color:var(--muted);}
 
+/* ── TESTIMONIAL CAROUSEL ── */
+.testimonial-section{background:var(--soft);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:70px 48px;text-align:center;}
+.testimonial-carousel{max-width:720px;margin:0 auto;position:relative;}
+.testimonial-track{overflow:hidden;}
+.testimonial-slides{display:flex;transition:transform .6s cubic-bezier(.4,0,.2,1);}
+.testimonial-slide{min-width:100%;padding:0 4px;}
+.testimonial-card{background:var(--white);border:1px solid var(--border);border-radius:20px;padding:40px;text-align:left;}
+.quote-mark{font-family:'DM Serif Display',serif;font-size:60px;color:var(--accent);line-height:.6;margin-bottom:20px;opacity:.25;}
+.testimonial-text{font-family:'DM Serif Display',serif;font-size:clamp(16px,2.5vw,22px);line-height:1.5;letter-spacing:-.2px;color:var(--ink);margin-bottom:24px;font-style:italic;}
+.testimonial-author{font-size:13px;color:var(--muted);}
+.testimonial-author strong{color:var(--ink);font-weight:500;}
+.testimonial-niche{display:inline-block;margin-bottom:20px;padding:4px 10px;border-radius:100px;font-size:11px;font-weight:500;}
+.testimonial-niche.wellness{background:rgba(45,106,79,.08);color:var(--accent);border:1px solid rgba(45,106,79,.15);}
+.testimonial-niche.sport{background:rgba(26,26,46,.07);color:#1a1a2e;border:1px solid rgba(26,26,46,.15);}
+.testimonial-dots{display:flex;justify-content:center;gap:8px;margin-top:28px;}
+.testimonial-dot{width:8px;height:8px;border-radius:50%;background:var(--border);border:none;cursor:pointer;transition:.3s;padding:0;}
+.testimonial-dot.active{background:var(--accent);width:24px;border-radius:4px;}
+
+/* ── CONTACT FORM ── */
+.contact-section{padding:80px 48px;max-width:1100px;margin:0 auto;}
+.contact-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:48px;align-items:start;margin-top:48px;}
+.contact-info h3{font-family:'DM Serif Display',serif;font-size:24px;margin-bottom:16px;}
+.contact-info p{font-size:14px;color:var(--muted);line-height:1.75;margin-bottom:24px;}
+.contact-detail{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+.contact-detail-icon{width:40px;height:40px;border-radius:12px;background:var(--soft);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.contact-detail-text{font-size:13px;color:var(--muted);}
+.contact-detail-text strong{display:block;font-size:14px;color:var(--ink);font-weight:500;margin-bottom:2px;}
+.contact-form{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:36px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.form-group{margin-bottom:18px;}
+.form-group label{display:block;font-size:12px;font-weight:500;color:var(--muted);margin-bottom:6px;letter-spacing:.3px;text-transform:uppercase;}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 16px;border:1px solid var(--border);border-radius:12px;font-family:'DM Sans',sans-serif;font-size:14px;color:var(--ink);background:var(--white);transition:.2s;outline:none;}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(45,106,79,.08);}
+.form-group textarea{resize:vertical;min-height:120px;}
+.form-group select{appearance:none;cursor:pointer;}
+.form-submit{width:100%;padding:14px;border-radius:100px;background:var(--ink);color:var(--white);border:none;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;cursor:pointer;transition:.2s;margin-top:4px;}
+.form-submit:hover{background:var(--accent);transform:translateY(-1px);}
+.form-success{display:none;text-align:center;padding:24px;background:#e8f5e9;border-radius:14px;color:#1b4332;font-size:14px;margin-top:16px;}
+.form-success.show{display:block;}
+
+/* ── CTA SECTION ── */
+.cta-section{margin:0 48px 80px;background:var(--ink);border-radius:24px;padding:64px 48px;text-align:center;color:var(--white);}
+.cta-section h2{font-family:'DM Serif Display',serif;font-size:clamp(28px,4vw,50px);letter-spacing:-.5px;margin-bottom:16px;}
+.cta-section p{opacity:.55;font-size:16px;margin-bottom:34px;}
+.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.btn-white{background:var(--white);color:var(--ink);padding:14px 30px;border-radius:100px;font-size:14px;font-weight:500;text-decoration:none;transition:.2s;display:inline-block;}
+.btn-white:hover{background:var(--accent2);color:var(--white);transform:translateY(-1px);}
+.btn-ghost{background:transparent;color:var(--white);padding:13px 30px;border-radius:100px;font-size:14px;border:1px solid rgba(255,255,255,.2);text-decoration:none;transition:.2s;display:inline-block;}
+.btn-ghost:hover{border-color:rgba(255,255,255,.6);transform:translateY(-1px);}
+
+/* ── FOOTER ── */
+footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;justify-content:space-between;align-items:center;}
+.footer-logo{font-family:'DM Serif Display',serif;font-size:18px;color:var(--ink);text-decoration:none;}
+.footer-logo span{color:var(--accent);}
+.footer-links{display:flex;gap:24px;list-style:none;}
+.footer-links a{font-size:12px;color:var(--muted);text-decoration:none;transition:.2s;}
+.footer-links a:hover{color:var(--ink);}
+.footer-copy{font-size:12px;color:var(--muted);}
+
 /* ── RESPONSIVE ── */
 @media(max-width:768px){
   nav{padding:14px 20px;}
@@ -432,6 +434,7 @@ footer{
   .contact-section{padding:60px 20px;}
   .contact-grid{grid-template-columns:1fr;}
   .form-row{grid-template-columns:1fr;}
+  .blog-grid{grid-template-columns:1fr;}
   .cta-section{margin:0 20px 60px;padding:44px 24px;}
   footer{padding:24px 20px;flex-direction:column;gap:16px;text-align:center;}
   .footer-links{justify-content:center;}
@@ -464,7 +467,7 @@ footer{
     Spezialisiert auf Wellness, Sport &amp; Lifestyle
   </div>
   <h1>Websites die <em>Wachstum</em> bringen,<br/>nicht nur gut aussehen</h1>
-  <p>Wir bauen professionelle Websites für Wellness-Studios, Sportvereine und Lifestyle-Brands – damit Sie bei Google gefunden werden und neue Kunden gewinnen.</p>
+  <p>Wir bauen professionelle Websites für Wellness-Studios, Sportvereine und Lifestyle-Brands – damit du bei Google gefunden wirst und neue Kunden gewinnst.</p>
   <div class="hero-btns">
     <a class="btn-primary" href="https://wa.me/4915777599801">Kostenlose Beratung →</a>
     <a class="btn-outline" href="#portfolio">Portfolio ansehen</a>
@@ -500,17 +503,17 @@ footer{
     <div class="spec-card">
       <div class="spec-icon">🌐</div>
       <h3>Website &amp; Design</h3>
-      <p>Professionell, mobil-optimiert und auf Ihre Marke zugeschnitten – bereit in 7–10 Tagen. Kein Baukastensystem, echte Handarbeit.</p>
+      <p>Professionell, mobil-optimiert und auf deine Marke zugeschnitten – bereit in 7–10 Tagen. Kein Baukastensystem, echte Handarbeit.</p>
     </div>
     <div class="spec-card">
       <div class="spec-icon">📍</div>
       <h3>Google Sichtbarkeit</h3>
-      <p>SEO-Grundoptimierung und Google Business Setup, damit Kunden Sie in Ihrer Stadt finden – und nicht die Konkurrenz.</p>
+      <p>SEO-Grundoptimierung und Google Business Setup, damit Kunden dich in deiner Stadt finden – und nicht die Konkurrenz.</p>
     </div>
     <div class="spec-card">
       <div class="spec-icon">📱</div>
       <h3>Social Media &amp; Buchung</h3>
-      <p>Instagram-Verlinkung, WhatsApp-Buchung und Online-Termintools – so wie Ihre Zielgruppe es erwartet.</p>
+      <p>Instagram-Verlinkung, WhatsApp-Buchung und Online-Termintools – so wie deine Zielgruppe es erwartet.</p>
     </div>
     <div class="spec-card">
       <div class="spec-icon">🔒</div>
@@ -621,13 +624,13 @@ footer{
     <div class="portfolio-card" style="cursor:default;">
       <div class="portfolio-img coming">
         <div class="coming-text">
-          <div class="big">Ihr Projekt?</div>
-          <div class="small">Werden Sie unsere nächste Referenz</div>
+          <div class="big">Dein Projekt?</div>
+          <div class="small">Werde unsere nächste Referenz</div>
         </div>
       </div>
       <div class="portfolio-info">
         <span class="portfolio-niche wellness" style="opacity:.5">Wellness · Sport · Lifestyle</span>
-        <h3>Ihr Unternehmen</h3>
+        <h3>Dein Unternehmen</h3>
         <p class="portfolio-location">📍 Köln &amp; Umgebung</p>
         <div class="portfolio-services">
           <span class="portfolio-service">Website Design</span>
@@ -755,7 +758,7 @@ footer{
     <div class="step">
       <div class="step-num">2</div>
       <h4>Konzept</h4>
-      <p>Wir erstellen ein individuelles Design-Konzept für Ihr Studio</p>
+      <p>Wir erstellen ein individuelles Design-Konzept für dein Studio</p>
     </div>
     <div class="step">
       <div class="step-num">3</div>
@@ -765,7 +768,7 @@ footer{
     <div class="step">
       <div class="step-num">4</div>
       <h4>Launch 🚀</h4>
-      <p>Ihre Website geht live – inklusive persönlicher Einweisung</p>
+      <p>Deine Website geht live – inklusive persönlicher Einweisung</p>
     </div>
   </div>
 </section>
@@ -784,7 +787,10 @@ footer{
         <h3>Ohne Website existierst du bei Google nicht</h3>
         <p>Jeden Tag suchen Menschen in deiner Stadt nach "Massage Köln" oder "Laufverein Siegen". Wer keine Website hat, taucht schlicht nicht auf – und die Konkurrenz bekommt den Kunden.</p>
         <div class="blog-divider"></div>
-        <span class="blog-meta">2 Min Lesezeit</span>
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span class="blog-meta">2 Min Lesezeit</span>
+          <span class="blog-read">Weiterlesen →</span>
+        </div>
       </div>
     </div>
 
@@ -815,10 +821,36 @@ footer{
 
 <!-- TESTIMONIAL -->
 <div class="testimonial-section">
-  <div class="testimonial-inner">
-    <div class="quote-mark">"</div>
-    <p class="testimonial-text">Seit unsere Website online ist, bekommen wir deutlich mehr Anfragen. Die Zusammenarbeit war unkompliziert, schnell und das Ergebnis hat unsere Erwartungen übertroffen.</p>
-    <p class="testimonial-author"><strong>Mayyah Thaimassage</strong> · Wellness · Odenthal</p>
+  <div class="testimonial-carousel">
+    <div class="testimonial-track">
+      <div class="testimonial-slides" id="testimonial-slides">
+
+        <!-- Slide 1: Mayyah -->
+        <div class="testimonial-slide">
+          <div class="testimonial-card">
+            <span class="testimonial-niche wellness">Wellness</span>
+            <div class="quote-mark">"</div>
+            <p class="testimonial-text">Seit unsere Website online ist, bekommen wir deutlich mehr Anfragen. Die Zusammenarbeit war unkompliziert, schnell und das Ergebnis hat unsere Erwartungen übertroffen.</p>
+            <p class="testimonial-author"><strong>Mayyah Thaimassage</strong> · Odenthal</p>
+          </div>
+        </div>
+
+        <!-- Slide 2: Hybrid Athletes -->
+        <div class="testimonial-slide">
+          <div class="testimonial-card">
+            <span class="testimonial-niche sport">Sport &amp; Community</span>
+            <div class="quote-mark">"</div>
+            <p class="testimonial-text">ZenWeb Studio hat unsere Community-Website professionell und schnell umgesetzt. Der Auftritt passt perfekt zu unserer Marke – wir sind sehr zufrieden.</p>
+            <p class="testimonial-author"><strong>Hybrid Athletes</strong> · Köln &amp; Siegen</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="testimonial-dots" id="testimonial-dots">
+      <button class="testimonial-dot active" onclick="goToSlide(0)"></button>
+      <button class="testimonial-dot" onclick="goToSlide(1)"></button>
+    </div>
   </div>
 </div>
 
@@ -826,15 +858,12 @@ footer{
 <section class="contact-section" id="kontakt">
   <div class="section-tag">Kontakt</div>
   <h2 class="section-title">Schreib uns direkt</h2>
-  <p class="section-sub">Kostenlose Beratung – wir melden uns innerhalb von 24 Stunden bei Ihnen.</p>
+  <p class="section-sub">Kostenlose Beratung – wir melden uns innerhalb von 24 Stunden bei dir.</p>
 
   <div class="contact-grid">
-
-    <!-- Links: Info -->
     <div class="contact-info">
-      <h3>Wir freuen uns auf Ihre Anfrage</h3>
-      <p>Egal ob Massagestudio, Sportverein oder Lifestyle-Brand – schreiben Sie uns und wir besprechen gemeinsam, wie wir Ihre Online-Präsenz aufbauen.</p>
-
+      <h3>Wir freuen uns auf deine Anfrage</h3>
+      <p>Egal ob Massagestudio, Sportverein oder Lifestyle-Brand – schreib uns und wir besprechen gemeinsam, wie wir deinen Online-Auftritt aufbauen.</p>
       <div class="contact-detail">
         <div class="contact-detail-icon">💬</div>
         <div class="contact-detail-text">
@@ -846,7 +875,7 @@ footer{
         <div class="contact-detail-icon">📧</div>
         <div class="contact-detail-text">
           <strong>E-Mail</strong>
-          <a href="/cdn-cgi/l/email-protection#97fef9f1f8d7edf2f9e0f2f5e4e3e2f3fef8b9f3f2" style="color:var(--accent);text-decoration:none;"><span class="__cf_email__" data-cfemail="2a43444c456a504f445d4f48595e5f4e4345044e4f">[email&#160;protected]</span></a>
+          <a href="mailto:info@zenwebstudio.de" style="color:var(--accent);text-decoration:none;">info@zenwebstudio.de</a>
         </div>
       </div>
       <div class="contact-detail">
@@ -865,12 +894,9 @@ footer{
       </div>
     </div>
 
-    <!-- Rechts: Formular -->
     <div class="contact-form">
       <form action="https://formspree.io/f/mzdjabgv" method="POST" id="contact-form">
         <input type="hidden" name="_subject" value="Neue Anfrage über zenwebstudio.de"/>
-        <input type="hidden" name="_next" value="https://zenwebstudio.de/#kontakt"/>
-
         <div class="form-row">
           <div class="form-group">
             <label>Vorname *</label>
@@ -881,17 +907,14 @@ footer{
             <input type="text" name="nachname" placeholder="Mustermann" required/>
           </div>
         </div>
-
         <div class="form-group">
           <label>E-Mail *</label>
-          <input type="email" name="email" placeholder="ihre@email.de" required/>
+          <input type="email" name="email" placeholder="deine@email.de" required/>
         </div>
-
         <div class="form-group">
           <label>Telefon / WhatsApp</label>
           <input type="tel" name="telefon" placeholder="+49 ..."/>
         </div>
-
         <div class="form-group">
           <label>Art des Projekts *</label>
           <select name="projekt" required>
@@ -902,26 +925,22 @@ footer{
             <option>Anderes</option>
           </select>
         </div>
-
         <div class="form-group">
-          <label>Ihre Nachricht *</label>
-          <textarea name="nachricht" placeholder="Erzählen Sie uns kurz von Ihrem Projekt..." required></textarea>
+          <label>Deine Nachricht *</label>
+          <textarea name="nachricht" placeholder="Erzähl uns kurz von deinem Projekt..." required></textarea>
         </div>
-
         <button type="submit" class="form-submit">Nachricht senden →</button>
-
         <div class="form-success" id="form-success">
-          ✅ Vielen Dank! Wir melden uns innerhalb von 24 Stunden bei Ihnen.
+          ✅ Vielen Dank! Wir melden uns innerhalb von 24 Stunden bei dir.
         </div>
       </form>
     </div>
-
   </div>
 </section>
 
 <!-- CTA -->
 <section class="cta-section" id="cta">
-  <h2>Bereit für euren nächsten<br/>digitalen Auftritt?</h2>
+  <h2>Bereit für deinen nächsten<br/>digitalen Auftritt?</h2>
   <p>Kostenlose Beratung – unverbindlich, ohne Risiko. Für Wellness, Sport &amp; Lifestyle.</p>
   <div class="cta-btns">
     <a class="btn-white" href="https://wa.me/4915777599801">Kostenlos anfragen via WhatsApp</a>
@@ -940,7 +959,18 @@ footer{
   <p class="footer-copy">© 2025 ZenWeb Studio · Wellness, Sport &amp; Lifestyle · Köln</p>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
+  let current = 0;
+  const slides = document.getElementById('testimonial-slides');
+  const dots = document.querySelectorAll('.testimonial-dot');
+  const total = dots.length;
+  function goToSlide(n){
+    current = n;
+    slides.style.transform = 'translateX(-'+(current*100)+'%)';
+    dots.forEach((d,i) => d.classList.toggle('active', i===current));
+  }
+  setInterval(() => goToSlide((current+1)%total), 4000);
+
   const form = document.getElementById('contact-form');
   if(form){
     form.addEventListener('submit', async function(e){
@@ -948,12 +978,17 @@ footer{
       const btn = form.querySelector('.form-submit');
       btn.textContent = 'Wird gesendet...';
       btn.disabled = true;
-      const data = new FormData(form);
-      const response = await fetch(form.action, {
-        method:'POST',
-        body:data,
-        headers:{'Accept':'application/json'}
-      });
+      const response = await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
       if(response.ok){
         form.reset();
-        document.getEl
+        document.getElementById('form-success').classList.add('show');
+        btn.textContent = 'Gesendet ✅';
+      } else {
+        btn.textContent = 'Fehler – bitte WhatsApp nutzen';
+        btn.disabled = false;
+      }
+    });
+  }
+</script>
+</body>
+</html>
