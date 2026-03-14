@@ -162,8 +162,24 @@ nav{
 .coming-text .big{font-family:'DM Serif Display',serif;font-size:36px;color:var(--gold);opacity:.4;}
 .coming-text .small{font-size:13px;color:var(--muted);margin-top:6px;}
 .portfolio-info{padding:22px 24px;}
-.portfolio-info h3{font-size:16px;font-weight:500;margin-bottom:4px;}
-.portfolio-info p{font-size:13px;color:var(--muted);}
+.portfolio-info h3{font-size:17px;font-weight:500;margin-bottom:4px;}
+.portfolio-info .portfolio-location{font-size:12px;color:var(--muted);margin-bottom:14px;}
+.portfolio-services{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;}
+.portfolio-service{
+  font-size:11px;padding:4px 10px;
+  background:var(--soft);border:1px solid var(--border);
+  border-radius:100px;color:var(--muted);
+}
+.portfolio-divider{height:1px;background:var(--border);margin:14px 0;}
+.portfolio-meta{display:flex;justify-content:space-between;align-items:center;}
+.portfolio-meta-label{font-size:11px;color:var(--muted);}
+.portfolio-meta-value{font-size:12px;font-weight:500;color:var(--ink);}
+.portfolio-link{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:12px;font-weight:500;color:var(--accent);
+  text-decoration:none;transition:.2s;
+}
+.portfolio-link:hover{color:var(--ink);}
 .portfolio-tag{
   display:inline-block;margin-top:12px;
   padding:5px 12px;background:var(--soft);
@@ -171,6 +187,13 @@ nav{
   color:var(--muted);border:1px solid var(--border);
 }
 .portfolio-tag.dark{background:var(--ink);color:var(--white);border-color:var(--ink);}
+.portfolio-niche{
+  display:inline-block;
+  padding:4px 10px;border-radius:100px;
+  font-size:11px;font-weight:500;margin-bottom:10px;
+}
+.portfolio-niche.wellness{background:rgba(45,106,79,.08);color:var(--accent);border:1px solid rgba(45,106,79,.15);}
+.portfolio-niche.sport{background:rgba(26,26,46,.07);color:#1a1a2e;border:1px solid rgba(26,26,46,.15);}
 
 /* ── PRICING ── */
 .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px;}
@@ -412,6 +435,8 @@ footer{
   <h2 class="section-title">Unsere Referenzen</h2>
   <p class="section-sub">Zwei abgeschlossene Projekte – von Wellness bis Sport. Professionelle Ergebnisse die für sich sprechen.</p>
   <div class="portfolio-grid">
+
+    <!-- Mayyah -->
     <a class="portfolio-card" href="https://contactteamhag-tech.github.io/Mayyah-thaimassage/" target="_blank" rel="noopener">
       <div class="portfolio-img mayyah">
         <div class="mock-browser">
@@ -430,11 +455,33 @@ footer{
         </div>
       </div>
       <div class="portfolio-info">
+        <span class="portfolio-niche wellness">Wellness</span>
         <h3>Mayyah Thaimassage</h3>
-        <p>Traditionelle Thai Massage · Odenthal</p>
-        <span class="portfolio-tag">Website ansehen →</span>
+        <p class="portfolio-location">📍 Odenthal, NRW</p>
+        <div class="portfolio-services">
+          <span class="portfolio-service">Website Design</span>
+          <span class="portfolio-service">9 Massage-Seiten</span>
+          <span class="portfolio-service">WhatsApp-Buchung</span>
+          <span class="portfolio-service">Google Maps</span>
+          <span class="portfolio-service">Preistabelle</span>
+          <span class="portfolio-service">Gutschein-Sektion</span>
+        </div>
+        <div class="portfolio-divider"></div>
+        <div class="portfolio-meta">
+          <div>
+            <div class="portfolio-meta-label">Lieferzeit</div>
+            <div class="portfolio-meta-value">7 Tage</div>
+          </div>
+          <div>
+            <div class="portfolio-meta-label">Paket</div>
+            <div class="portfolio-meta-value">Professional</div>
+          </div>
+          <span class="portfolio-link">Website ansehen →</span>
+        </div>
       </div>
     </a>
+
+    <!-- Hybrid Athletes -->
     <a class="portfolio-card" href="https://contactteamhag-tech.github.io/hybrid-athletes.official/" target="_blank" rel="noopener">
       <div class="portfolio-img" style="background:linear-gradient(135deg,#0a0a0a 0%,#1a1a2e 100%);">
         <div class="mock-browser">
@@ -444,20 +491,42 @@ footer{
             <div class="mock-dot" style="background:#28c840"></div>
           </div>
           <div class="mock-content">
-            <div class="mock-line" style="width:55%;background:rgba(255,255,255,.6);"></div>
+            <div class="mock-line" style="width:55%;background:rgba(255,255,255,.55);"></div>
             <div class="mock-line" style="width:90%;"></div>
             <div class="mock-line" style="width:70%;"></div>
             <div style="height:4px"></div>
-            <div class="mock-btn" style="background:rgba(255,255,255,.2);"></div>
+            <div class="mock-btn" style="background:rgba(255,255,255,.18);"></div>
           </div>
         </div>
       </div>
       <div class="portfolio-info">
+        <span class="portfolio-niche sport">Sport &amp; Community</span>
         <h3>Hybrid Athletes</h3>
-        <p>Laufverein &amp; Community · Köln &amp; Siegen</p>
-        <span class="portfolio-tag">Website ansehen →</span>
+        <p class="portfolio-location">📍 Köln &amp; Siegen, NRW</p>
+        <div class="portfolio-services">
+          <span class="portfolio-service">Website Design</span>
+          <span class="portfolio-service">Event-Sektion</span>
+          <span class="portfolio-service">Instagram-Integration</span>
+          <span class="portfolio-service">Sponsor-Bereich</span>
+          <span class="portfolio-service">Community-Seiten</span>
+          <span class="portfolio-service">FAQ</span>
+        </div>
+        <div class="portfolio-divider"></div>
+        <div class="portfolio-meta">
+          <div>
+            <div class="portfolio-meta-label">Lieferzeit</div>
+            <div class="portfolio-meta-value">10 Tage</div>
+          </div>
+          <div>
+            <div class="portfolio-meta-label">Paket</div>
+            <div class="portfolio-meta-value">Professional</div>
+          </div>
+          <span class="portfolio-link">Website ansehen →</span>
+        </div>
       </div>
     </a>
+
+    <!-- Next Project -->
     <div class="portfolio-card" style="cursor:default;">
       <div class="portfolio-img coming">
         <div class="coming-text">
@@ -466,11 +535,30 @@ footer{
         </div>
       </div>
       <div class="portfolio-info">
+        <span class="portfolio-niche wellness" style="opacity:.5">Wellness · Sport · Lifestyle</span>
         <h3>Ihr Unternehmen</h3>
-        <p>Wir haben noch freie Kapazitäten für neue Projekte</p>
-        <a class="portfolio-tag dark" href="https://wa.me/49XXXXXXXXXX">Jetzt anfragen →</a>
+        <p class="portfolio-location">📍 Köln &amp; Umgebung</p>
+        <div class="portfolio-services">
+          <span class="portfolio-service">Website Design</span>
+          <span class="portfolio-service">SEO</span>
+          <span class="portfolio-service">Google Business</span>
+          <span class="portfolio-service">WhatsApp</span>
+        </div>
+        <div class="portfolio-divider"></div>
+        <div class="portfolio-meta">
+          <div>
+            <div class="portfolio-meta-label">Ab</div>
+            <div class="portfolio-meta-value">999€</div>
+          </div>
+          <div>
+            <div class="portfolio-meta-label">Lieferzeit</div>
+            <div class="portfolio-meta-value">7–10 Tage</div>
+          </div>
+          <a class="portfolio-link" href="https://wa.me/49XXXXXXXXXX">Jetzt anfragen →</a>
+        </div>
       </div>
     </div>
+
   </div>
 </section>
 
