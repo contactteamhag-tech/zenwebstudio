@@ -298,23 +298,45 @@ nav{
 .step h4{font-size:14px;font-weight:500;margin-bottom:6px;}
 .step p{font-size:12px;color:var(--muted);line-height:1.6;}
 
-/* ── TESTIMONIAL ── */
-.testimonial-section{
-  background:var(--soft);
-  border-top:1px solid var(--border);
-  border-bottom:1px solid var(--border);
-  padding:70px 48px;text-align:center;
-}
-.testimonial-inner{max-width:680px;margin:0 auto;}
-.quote-mark{font-family:'DM Serif Display',serif;font-size:80px;color:var(--accent);line-height:.6;margin-bottom:20px;opacity:.3;}
-.testimonial-text{
-  font-family:'DM Serif Display',serif;
-  font-size:clamp(18px,3vw,26px);
-  line-height:1.45;letter-spacing:-.2px;
-  color:var(--ink);margin-bottom:28px;font-style:italic;
-}
+/* ── TESTIMONIAL CAROUSEL ── */
+.testimonial-section{background:var(--soft);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:70px 48px;text-align:center;}
+.testimonial-carousel{max-width:720px;margin:0 auto;position:relative;}
+.testimonial-track{overflow:hidden;}
+.testimonial-slides{display:flex;transition:transform .6s cubic-bezier(.4,0,.2,1);}
+.testimonial-slide{min-width:100%;padding:0 4px;}
+.testimonial-card{background:var(--white);border:1px solid var(--border);border-radius:20px;padding:40px;text-align:left;}
+.quote-mark{font-family:'DM Serif Display',serif;font-size:60px;color:var(--accent);line-height:.6;margin-bottom:20px;opacity:.25;}
+.testimonial-text{font-family:'DM Serif Display',serif;font-size:clamp(16px,2.5vw,22px);line-height:1.5;letter-spacing:-.2px;color:var(--ink);margin-bottom:24px;font-style:italic;}
 .testimonial-author{font-size:13px;color:var(--muted);}
 .testimonial-author strong{color:var(--ink);font-weight:500;}
+.testimonial-niche{display:inline-block;margin-bottom:20px;padding:4px 10px;border-radius:100px;font-size:11px;font-weight:500;}
+.testimonial-niche.wellness{background:rgba(45,106,79,.08);color:var(--accent);border:1px solid rgba(45,106,79,.15);}
+.testimonial-niche.sport{background:rgba(26,26,46,.07);color:#1a1a2e;border:1px solid rgba(26,26,46,.15);}
+.testimonial-dots{display:flex;justify-content:center;gap:8px;margin-top:28px;}
+.testimonial-dot{width:8px;height:8px;border-radius:50%;background:var(--border);border:none;cursor:pointer;transition:.3s;padding:0;}
+.testimonial-dot.active{background:var(--accent);width:24px;border-radius:4px;}
+
+/* ── CONTACT FORM ── */
+.contact-section{padding:80px 48px;max-width:1100px;margin:0 auto;}
+.contact-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:48px;align-items:start;margin-top:48px;}
+.contact-info h3{font-family:'DM Serif Display',serif;font-size:24px;margin-bottom:16px;}
+.contact-info p{font-size:14px;color:var(--muted);line-height:1.75;margin-bottom:24px;}
+.contact-detail{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+.contact-detail-icon{width:40px;height:40px;border-radius:12px;background:var(--soft);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.contact-detail-text{font-size:13px;color:var(--muted);}
+.contact-detail-text strong{display:block;font-size:14px;color:var(--ink);font-weight:500;margin-bottom:2px;}
+.contact-form{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:36px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.form-group{margin-bottom:18px;}
+.form-group label{display:block;font-size:12px;font-weight:500;color:var(--muted);margin-bottom:6px;letter-spacing:.3px;text-transform:uppercase;}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 16px;border:1px solid var(--border);border-radius:12px;font-family:'DM Sans',sans-serif;font-size:14px;color:var(--ink);background:var(--white);transition:.2s;outline:none;}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(45,106,79,.08);}
+.form-group textarea{resize:vertical;min-height:120px;}
+.form-group select{appearance:none;cursor:pointer;}
+.form-submit{width:100%;padding:14px;border-radius:100px;background:var(--ink);color:var(--white);border:none;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;cursor:pointer;transition:.2s;margin-top:4px;}
+.form-submit:hover{background:var(--accent);transform:translateY(-1px);}
+.form-success{display:none;text-align:center;padding:24px;background:#e8f5e9;border-radius:14px;color:#1b4332;font-size:14px;margin-top:16px;}
+.form-success.show{display:block;}
 
 /* ── CTA SECTION ── */
 .cta-section{
@@ -357,65 +379,6 @@ footer{
 .footer-links a:hover{color:var(--ink);}
 .footer-copy{font-size:12px;color:var(--muted);}
 
-/* ── TESTIMONIAL CAROUSEL ── */
-.testimonial-section{background:var(--soft);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:70px 48px;text-align:center;}
-.testimonial-carousel{max-width:720px;margin:0 auto;position:relative;}
-.testimonial-track{overflow:hidden;}
-.testimonial-slides{display:flex;transition:transform .6s cubic-bezier(.4,0,.2,1);}
-.testimonial-slide{min-width:100%;padding:0 4px;}
-.testimonial-card{background:var(--white);border:1px solid var(--border);border-radius:20px;padding:40px;text-align:left;}
-.quote-mark{font-family:'DM Serif Display',serif;font-size:60px;color:var(--accent);line-height:.6;margin-bottom:20px;opacity:.25;}
-.testimonial-text{font-family:'DM Serif Display',serif;font-size:clamp(16px,2.5vw,22px);line-height:1.5;letter-spacing:-.2px;color:var(--ink);margin-bottom:24px;font-style:italic;}
-.testimonial-author{font-size:13px;color:var(--muted);}
-.testimonial-author strong{color:var(--ink);font-weight:500;}
-.testimonial-niche{display:inline-block;margin-bottom:20px;padding:4px 10px;border-radius:100px;font-size:11px;font-weight:500;}
-.testimonial-niche.wellness{background:rgba(45,106,79,.08);color:var(--accent);border:1px solid rgba(45,106,79,.15);}
-.testimonial-niche.sport{background:rgba(26,26,46,.07);color:#1a1a2e;border:1px solid rgba(26,26,46,.15);}
-.testimonial-dots{display:flex;justify-content:center;gap:8px;margin-top:28px;}
-.testimonial-dot{width:8px;height:8px;border-radius:50%;background:var(--border);border:none;cursor:pointer;transition:.3s;padding:0;}
-.testimonial-dot.active{background:var(--accent);width:24px;border-radius:4px;}
-
-/* ── CONTACT FORM ── */
-.contact-section{padding:80px 48px;max-width:1100px;margin:0 auto;}
-.contact-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:48px;align-items:start;margin-top:48px;}
-.contact-info h3{font-family:'DM Serif Display',serif;font-size:24px;margin-bottom:16px;}
-.contact-info p{font-size:14px;color:var(--muted);line-height:1.75;margin-bottom:24px;}
-.contact-detail{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
-.contact-detail-icon{width:40px;height:40px;border-radius:12px;background:var(--soft);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
-.contact-detail-text{font-size:13px;color:var(--muted);}
-.contact-detail-text strong{display:block;font-size:14px;color:var(--ink);font-weight:500;margin-bottom:2px;}
-.contact-form{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:36px;}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-.form-group{margin-bottom:18px;}
-.form-group label{display:block;font-size:12px;font-weight:500;color:var(--muted);margin-bottom:6px;letter-spacing:.3px;text-transform:uppercase;}
-.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 16px;border:1px solid var(--border);border-radius:12px;font-family:'DM Sans',sans-serif;font-size:14px;color:var(--ink);background:var(--white);transition:.2s;outline:none;}
-.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(45,106,79,.08);}
-.form-group textarea{resize:vertical;min-height:120px;}
-.form-group select{appearance:none;cursor:pointer;}
-.form-submit{width:100%;padding:14px;border-radius:100px;background:var(--ink);color:var(--white);border:none;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;cursor:pointer;transition:.2s;margin-top:4px;}
-.form-submit:hover{background:var(--accent);transform:translateY(-1px);}
-.form-success{display:none;text-align:center;padding:24px;background:#e8f5e9;border-radius:14px;color:#1b4332;font-size:14px;margin-top:16px;}
-.form-success.show{display:block;}
-
-/* ── CTA SECTION ── */
-.cta-section{margin:0 48px 80px;background:var(--ink);border-radius:24px;padding:64px 48px;text-align:center;color:var(--white);}
-.cta-section h2{font-family:'DM Serif Display',serif;font-size:clamp(28px,4vw,50px);letter-spacing:-.5px;margin-bottom:16px;}
-.cta-section p{opacity:.55;font-size:16px;margin-bottom:34px;}
-.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
-.btn-white{background:var(--white);color:var(--ink);padding:14px 30px;border-radius:100px;font-size:14px;font-weight:500;text-decoration:none;transition:.2s;display:inline-block;}
-.btn-white:hover{background:var(--accent2);color:var(--white);transform:translateY(-1px);}
-.btn-ghost{background:transparent;color:var(--white);padding:13px 30px;border-radius:100px;font-size:14px;border:1px solid rgba(255,255,255,.2);text-decoration:none;transition:.2s;display:inline-block;}
-.btn-ghost:hover{border-color:rgba(255,255,255,.6);transform:translateY(-1px);}
-
-/* ── FOOTER ── */
-footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;justify-content:space-between;align-items:center;}
-.footer-logo{font-family:'DM Serif Display',serif;font-size:18px;color:var(--ink);text-decoration:none;}
-.footer-logo span{color:var(--accent);}
-.footer-links{display:flex;gap:24px;list-style:none;}
-.footer-links a{font-size:12px;color:var(--muted);text-decoration:none;transition:.2s;}
-.footer-links a:hover{color:var(--ink);}
-.footer-copy{font-size:12px;color:var(--muted);}
-
 /* ── RESPONSIVE ── */
 @media(max-width:768px){
   nav{padding:14px 20px;}
@@ -434,7 +397,6 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;justify
   .contact-section{padding:60px 20px;}
   .contact-grid{grid-template-columns:1fr;}
   .form-row{grid-template-columns:1fr;}
-  .blog-grid{grid-template-columns:1fr;}
   .cta-section{margin:0 20px 60px;padding:44px 24px;}
   footer{padding:24px 20px;flex-direction:column;gap:16px;text-align:center;}
   .footer-links{justify-content:center;}
@@ -497,7 +459,7 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;justify
 <!-- LEISTUNGEN -->
 <section class="section" id="leistungen">
   <div class="section-tag">Unsere Spezialisierung</div>
-  <h2 class="section-title">Wir verstehen eure Branche</h2>
+  <h2 class="section-title">Wir verstehen deine Branche</h2>
   <p class="section-sub">Keine generische Agentur – wir bauen für Wellness, Sport und Lifestyle. Projekte die zur Marke passen und Ergebnisse liefern.</p>
   <div class="spec-grid">
     <div class="spec-card">
@@ -624,13 +586,13 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;justify
     <div class="portfolio-card" style="cursor:default;">
       <div class="portfolio-img coming">
         <div class="coming-text">
-          <div class="big">Dein Projekt?</div>
+          <div class="big">Ihr Projekt?</div>
           <div class="small">Werde unsere nächste Referenz</div>
         </div>
       </div>
       <div class="portfolio-info">
         <span class="portfolio-niche wellness" style="opacity:.5">Wellness · Sport · Lifestyle</span>
-        <h3>Dein Unternehmen</h3>
+        <h3>Ihr Unternehmen</h3>
         <p class="portfolio-location">📍 Köln &amp; Umgebung</p>
         <div class="portfolio-services">
           <span class="portfolio-service">Website Design</span>
@@ -768,7 +730,7 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;justify
     <div class="step">
       <div class="step-num">4</div>
       <h4>Launch 🚀</h4>
-      <p>Deine Website geht live – inklusive persönlicher Einweisung</p>
+      <p>Ihre Website geht live – inklusive persönlicher Einweisung</p>
     </div>
   </div>
 </section>
@@ -787,10 +749,7 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;justify
         <h3>Ohne Website existierst du bei Google nicht</h3>
         <p>Jeden Tag suchen Menschen in deiner Stadt nach "Massage Köln" oder "Laufverein Siegen". Wer keine Website hat, taucht schlicht nicht auf – und die Konkurrenz bekommt den Kunden.</p>
         <div class="blog-divider"></div>
-        <div style="display:flex;justify-content:space-between;align-items:center;">
-          <span class="blog-meta">2 Min Lesezeit</span>
-          <span class="blog-read">Weiterlesen →</span>
-        </div>
+        
       </div>
     </div>
 
@@ -801,7 +760,7 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;justify
         <h3>Eine Website macht aus Interessenten Kunden</h3>
         <p>Über 80% der Menschen recherchieren online bevor sie ein Unternehmen besuchen. Eine professionelle Website mit Fotos, Preisen und Bewertungen schafft sofort Vertrauen – noch bevor der erste Kontakt stattfindet.</p>
         <div class="blog-divider"></div>
-        <span class="blog-meta">3 Min Lesezeit</span>
+        
       </div>
     </div>
 
@@ -812,7 +771,7 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;justify
         <h3>Deine Website arbeitet 24/7 – auch wenn du schläfst</h3>
         <p>Ein Instagram-Post verschwindet nach 24 Stunden. Deine Website hingegen ist immer online, immer auffindbar und bringt dir rund um die Uhr neue Anfragen – ohne dass du aktiv etwas tun musst.</p>
         <div class="blog-divider"></div>
-        <span class="blog-meta">2 Min Lesezeit</span>
+        
       </div>
     </div>
 
@@ -824,8 +783,6 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;justify
   <div class="testimonial-carousel">
     <div class="testimonial-track">
       <div class="testimonial-slides" id="testimonial-slides">
-
-        <!-- Slide 1: Mayyah -->
         <div class="testimonial-slide">
           <div class="testimonial-card">
             <span class="testimonial-niche wellness">Wellness</span>
@@ -834,8 +791,6 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;justify
             <p class="testimonial-author"><strong>Mayyah Thaimassage</strong> · Odenthal</p>
           </div>
         </div>
-
-        <!-- Slide 2: Hybrid Athletes -->
         <div class="testimonial-slide">
           <div class="testimonial-card">
             <span class="testimonial-niche sport">Sport &amp; Community</span>
@@ -844,7 +799,6 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;justify
             <p class="testimonial-author"><strong>Hybrid Athletes</strong> · Köln &amp; Siegen</p>
           </div>
         </div>
-
       </div>
     </div>
     <div class="testimonial-dots" id="testimonial-dots">
@@ -859,7 +813,6 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;justify
   <div class="section-tag">Kontakt</div>
   <h2 class="section-title">Schreib uns direkt</h2>
   <p class="section-sub">Kostenlose Beratung – wir melden uns innerhalb von 24 Stunden bei dir.</p>
-
   <div class="contact-grid">
     <div class="contact-info">
       <h3>Wir freuen uns auf deine Anfrage</h3>
@@ -893,7 +846,6 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;justify
         </div>
       </div>
     </div>
-
     <div class="contact-form">
       <form action="https://formspree.io/f/mzdjabgv" method="POST" id="contact-form">
         <input type="hidden" name="_subject" value="Neue Anfrage über zenwebstudio.de"/>
@@ -939,7 +891,7 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;justify
 </section>
 
 <!-- CTA -->
-<section class="cta-section" id="cta">
+<section class="cta-section" id="kontakt">
   <h2>Bereit für deinen nächsten<br/>digitalen Auftritt?</h2>
   <p>Kostenlose Beratung – unverbindlich, ohne Risiko. Für Wellness, Sport &amp; Lifestyle.</p>
   <div class="cta-btns">
@@ -990,5 +942,6 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;justify
     });
   }
 </script>
+
 </body>
 </html>
