@@ -303,18 +303,33 @@ nav{
   background:var(--soft);
   border-top:1px solid var(--border);
   border-bottom:1px solid var(--border);
-  padding:70px 48px;text-align:center;
+  padding:70px 48px;
 }
-.testimonial-inner{max-width:680px;margin:0 auto;}
-.quote-mark{font-family:'DM Serif Display',serif;font-size:80px;color:var(--accent);line-height:.6;margin-bottom:20px;opacity:.3;}
+.testimonial-grid{
+  max-width:1000px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1fr;gap:24px;
+}
+.testimonial-card{
+  background:var(--white);border:1px solid var(--border);
+  border-radius:20px;padding:36px;
+}
+.quote-mark{font-family:'DM Serif Display',serif;font-size:60px;color:var(--accent);line-height:.6;margin-bottom:20px;opacity:.25;}
 .testimonial-text{
   font-family:'DM Serif Display',serif;
-  font-size:clamp(18px,3vw,26px);
-  line-height:1.45;letter-spacing:-.2px;
-  color:var(--ink);margin-bottom:28px;font-style:italic;
+  font-size:clamp(16px,2vw,21px);
+  line-height:1.5;letter-spacing:-.2px;
+  color:var(--ink);margin-bottom:24px;font-style:italic;
 }
 .testimonial-author{font-size:13px;color:var(--muted);}
 .testimonial-author strong{color:var(--ink);font-weight:500;}
+.testimonial-niche{
+  display:inline-block;margin-bottom:20px;
+  padding:4px 10px;border-radius:100px;
+  font-size:11px;font-weight:500;
+}
+.testimonial-niche.wellness{background:rgba(45,106,79,.08);color:var(--accent);border:1px solid rgba(45,106,79,.15);}
+.testimonial-niche.sport{background:rgba(26,26,46,.07);color:#1a1a2e;border:1px solid rgba(26,26,46,.15);}
+.testimonial-placeholder{opacity:.5;font-style:italic;}
 
 /* ── CTA SECTION ── */
 .cta-section{
@@ -372,6 +387,7 @@ footer{
   .process-steps{grid-template-columns:1fr 1fr;gap:24px;}
   .process-steps::before{display:none;}
   .testimonial-section{padding:50px 20px;}
+  .testimonial-grid{grid-template-columns:1fr;}
   .cta-section{margin:0 20px 60px;padding:44px 24px;}
   footer{padding:24px 20px;flex-direction:column;gap:16px;text-align:center;}
   .footer-links{justify-content:center;}
@@ -764,10 +780,24 @@ footer{
 
 <!-- TESTIMONIAL -->
 <div class="testimonial-section">
-  <div class="testimonial-inner">
-    <div class="quote-mark">"</div>
-    <p class="testimonial-text">Seit unsere Website online ist, bekommen wir deutlich mehr Anfragen. Die Zusammenarbeit war unkompliziert, schnell und das Ergebnis hat unsere Erwartungen übertroffen.</p>
-    <p class="testimonial-author"><strong>Mayyah Thaimassage</strong> · Wellness · Odenthal</p>
+  <div class="testimonial-grid">
+
+    <!-- Mayyah -->
+    <div class="testimonial-card">
+      <span class="testimonial-niche wellness">Wellness</span>
+      <div class="quote-mark">"</div>
+      <p class="testimonial-text">Seit unsere Website online ist, bekommen wir deutlich mehr Anfragen. Die Zusammenarbeit war unkompliziert, schnell und das Ergebnis hat unsere Erwartungen übertroffen.</p>
+      <p class="testimonial-author"><strong>Mayyah Thaimassage</strong> · Odenthal</p>
+    </div>
+
+    <!-- Hybrid Athletes -->
+    <div class="testimonial-card">
+      <span class="testimonial-niche sport">Sport &amp; Community</span>
+      <div class="quote-mark">"</div>
+      <p class="testimonial-text testimonial-placeholder">ZenWeb Studio hat unsere Community-Website professionell und schnell umgesetzt. Der Auftritt passt perfekt zu unserer Marke – wir sind sehr zufrieden.</p>
+      <p class="testimonial-author"><strong>Hybrid Athletes</strong> · Köln &amp; Siegen</p>
+    </div>
+
   </div>
 </div>
 
