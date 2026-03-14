@@ -303,20 +303,24 @@ nav{
   background:var(--soft);
   border-top:1px solid var(--border);
   border-bottom:1px solid var(--border);
-  padding:70px 48px;
+  padding:70px 48px;text-align:center;
 }
-.testimonial-grid{
-  max-width:1000px;margin:0 auto;
-  display:grid;grid-template-columns:1fr 1fr;gap:24px;
+.testimonial-carousel{max-width:720px;margin:0 auto;position:relative;}
+.testimonial-track{overflow:hidden;}
+.testimonial-slides{
+  display:flex;transition:transform .6s cubic-bezier(.4,0,.2,1);
+}
+.testimonial-slide{
+  min-width:100%;padding:0 4px;
 }
 .testimonial-card{
   background:var(--white);border:1px solid var(--border);
-  border-radius:20px;padding:36px;
+  border-radius:20px;padding:40px;text-align:left;
 }
 .quote-mark{font-family:'DM Serif Display',serif;font-size:60px;color:var(--accent);line-height:.6;margin-bottom:20px;opacity:.25;}
 .testimonial-text{
   font-family:'DM Serif Display',serif;
-  font-size:clamp(16px,2vw,21px);
+  font-size:clamp(16px,2.5vw,22px);
   line-height:1.5;letter-spacing:-.2px;
   color:var(--ink);margin-bottom:24px;font-style:italic;
 }
@@ -329,6 +333,17 @@ nav{
 }
 .testimonial-niche.wellness{background:rgba(45,106,79,.08);color:var(--accent);border:1px solid rgba(45,106,79,.15);}
 .testimonial-niche.sport{background:rgba(26,26,46,.07);color:#1a1a2e;border:1px solid rgba(26,26,46,.15);}
+.testimonial-dots{
+  display:flex;justify-content:center;gap:8px;margin-top:28px;
+}
+.testimonial-dot{
+  width:8px;height:8px;border-radius:50%;
+  background:var(--border);border:none;cursor:pointer;
+  transition:.3s;padding:0;
+}
+.testimonial-dot.active{
+  background:var(--accent);width:24px;border-radius:4px;
+}
 .testimonial-placeholder{opacity:.5;font-style:italic;}
 
 /* ── CTA SECTION ── */
@@ -780,26 +795,58 @@ footer{
 
 <!-- TESTIMONIAL -->
 <div class="testimonial-section">
-  <div class="testimonial-grid">
+  <div class="testimonial-carousel">
+    <div class="testimonial-track">
+      <div class="testimonial-slides" id="testimonial-slides">
 
-    <!-- Mayyah -->
-    <div class="testimonial-card">
-      <span class="testimonial-niche wellness">Wellness</span>
-      <div class="quote-mark">"</div>
-      <p class="testimonial-text">Seit unsere Website online ist, bekommen wir deutlich mehr Anfragen. Die Zusammenarbeit war unkompliziert, schnell und das Ergebnis hat unsere Erwartungen übertroffen.</p>
-      <p class="testimonial-author"><strong>Mayyah Thaimassage</strong> · Odenthal</p>
+        <!-- Slide 1: Mayyah -->
+        <div class="testimonial-slide">
+          <div class="testimonial-card">
+            <span class="testimonial-niche wellness">Wellness</span>
+            <div class="quote-mark">"</div>
+            <p class="testimonial-text">Seit unsere Website online ist, bekommen wir deutlich mehr Anfragen. Die Zusammenarbeit war unkompliziert, schnell und das Ergebnis hat unsere Erwartungen übertroffen.</p>
+            <p class="testimonial-author"><strong>Mayyah Thaimassage</strong> · Odenthal</p>
+          </div>
+        </div>
+
+        <!-- Slide 2: Hybrid Athletes -->
+        <div class="testimonial-slide">
+          <div class="testimonial-card">
+            <span class="testimonial-niche sport">Sport &amp; Community</span>
+            <div class="quote-mark">"</div>
+            <p class="testimonial-text">ZenWeb Studio hat unsere Community-Website professionell und schnell umgesetzt. Der Auftritt passt perfekt zu unserer Marke – wir sind sehr zufrieden.</p>
+            <p class="testimonial-author"><strong>Hybrid Athletes</strong> · Köln &amp; Siegen</p>
+          </div>
+        </div>
+
+      </div>
     </div>
 
-    <!-- Hybrid Athletes -->
-    <div class="testimonial-card">
-      <span class="testimonial-niche sport">Sport &amp; Community</span>
-      <div class="quote-mark">"</div>
-      <p class="testimonial-text testimonial-placeholder">ZenWeb Studio hat unsere Community-Website professionell und schnell umgesetzt. Der Auftritt passt perfekt zu unserer Marke – wir sind sehr zufrieden.</p>
-      <p class="testimonial-author"><strong>Hybrid Athletes</strong> · Köln &amp; Siegen</p>
+    <!-- Dots -->
+    <div class="testimonial-dots" id="testimonial-dots">
+      <button class="testimonial-dot active" onclick="goToSlide(0)"></button>
+      <button class="testimonial-dot" onclick="goToSlide(1)"></button>
     </div>
-
   </div>
 </div>
+
+<script>
+  let current = 0;
+  const slides = document.getElementById('testimonial-slides');
+  const dots = document.querySelectorAll('.testimonial-dot');
+  const total = dots.length;
+
+  function goToSlide(n) {
+    current = n;
+    slides.style.transform = 'translateX(-' + (current * 100) + '%)';
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  // Auto-rotate every 4 seconds
+  setInterval(() => {
+    goToSlide((current + 1) % total);
+  }, 4000);
+</script>
 
 <!-- CTA -->
 <section class="cta-section" id="kontakt">
