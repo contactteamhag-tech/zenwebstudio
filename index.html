@@ -831,8 +831,8 @@ footer{
       </div>
     </div>
     <div class="testimonial-dots" id="testimonial-dots">
-      <button class="testimonial-dot active" onclick="goToSlide(0)"></button>
-      <button class="testimonial-dot" onclick="goToSlide(1)"></button>
+      <button class="testimonial-dot active"></button>
+      <button class="testimonial-dot"></button>
     </div>
   </div>
 </div>
@@ -941,16 +941,20 @@ footer{
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  let current = 0;
-  const slides = document.getElementById('testimonial-slides');
-  const dots = document.querySelectorAll('.testimonial-dot');
-  const total = dots.length;
-  function goToSlide(n){
-    current = n;
-    slides.style.transform = 'translateX(-'+(current*100)+'%)';
-    dots.forEach((d,i) => d.classList.toggle('active', i===current));
-  }
-  setInterval(() => goToSlide((current+1)%total), 4000);
+  document.addEventListener('DOMContentLoaded', function(){
+    let current = 0;
+    const slides = document.getElementById('testimonial-slides');
+    const dots = document.querySelectorAll('.testimonial-dot');
+    const total = dots.length;
+    if(!slides || total === 0) return;
+    function goToSlide(n){
+      current = (n + total) % total;
+      slides.style.transform = 'translateX(-'+(current*100)+'%)';
+      dots.forEach((d,i) => d.classList.toggle('active', i===current));
+    }
+    dots.forEach((d,i) => d.addEventListener('click', () => goToSlide(i)));
+    setInterval(() => goToSlide(current + 1), 4000);
+  });
 
   const form = document.getElementById('contact-form');
   if(form){
