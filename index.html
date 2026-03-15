@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>ZenWeb Studio – Websites für Wellness, Sport &amp; Lifestyle</title>
+<title>ZenWeb Studio – Webdesign Köln für Wellness, Sport &amp; Lifestyle</title>
 <meta name="description" content="ZenWeb Studio – Professionelle Websites für Wellness, Sport &amp; Lifestyle Businesses. Ab 999€ einmalig. Fertig in 7–10 Tagen. Google-optimiert, mobil-ready."/>
 <!-- Open Graph -->
 <meta property="og:title" content="ZenWeb Studio – Webdesign Köln für Wellness, Sport &amp; Lifestyle"/>
@@ -42,129 +42,59 @@
 html{scroll-behavior:smooth;}
 body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--ink);line-height:1.6;overflow-x:hidden;}
 
-/* ── NAV ── */
-nav{
-  display:flex;justify-content:space-between;align-items:center;
-  padding:18px 48px;
-  border-bottom:1px solid var(--border);
-  position:sticky;top:0;
-  background:rgba(255,255,255,.96);
-  backdrop-filter:blur(12px);
-  z-index:100;
-}
+/* NAV */
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 48px;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);z-index:100;}
 .logo{font-family:'DM Serif Display',serif;font-size:22px;letter-spacing:-.3px;color:var(--ink);text-decoration:none;}
 .logo span{color:var(--accent);}
 .nav-links{display:flex;gap:28px;list-style:none;}
 .nav-links a{text-decoration:none;color:var(--muted);font-size:14px;font-weight:400;transition:.2s;}
 .nav-links a:hover{color:var(--ink);}
-.nav-cta{
-  background:var(--ink);color:var(--white);
-  padding:9px 20px;border-radius:100px;
-  font-size:13px;font-weight:500;
-  text-decoration:none;transition:.2s;
-}
+.nav-cta{background:var(--ink);color:var(--white);padding:9px 20px;border-radius:100px;font-size:13px;font-weight:500;text-decoration:none;transition:.2s;}
 .nav-cta:hover{background:var(--accent);}
 
-/* ── HERO ── */
-.hero{
-  padding:100px 48px 90px;
-  max-width:920px;margin:0 auto;text-align:center;
-}
-.hero-badge{
-  display:inline-flex;align-items:center;gap:6px;
-  background:var(--soft);border:1px solid var(--border);
-  padding:6px 16px;border-radius:100px;
-  font-size:12px;color:var(--muted);margin-bottom:30px;
-}
+/* HERO */
+.hero{padding:100px 48px 90px;max-width:920px;margin:0 auto;text-align:center;}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:var(--soft);border:1px solid var(--border);padding:6px 16px;border-radius:100px;font-size:12px;color:var(--muted);margin-bottom:30px;}
 .hero-badge span{width:7px;height:7px;border-radius:50%;background:var(--accent2);display:inline-block;animation:pulse 2s infinite;}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-.hero h1{
-  font-family:'DM Serif Display',serif;
-  font-size:clamp(40px,7vw,76px);
-  line-height:1.07;letter-spacing:-1.5px;
-  color:var(--ink);margin-bottom:24px;
-}
+.hero h1{font-family:'DM Serif Display',serif;font-size:clamp(40px,7vw,76px);line-height:1.07;letter-spacing:-1.5px;color:var(--ink);margin-bottom:24px;}
 .hero h1 em{font-style:italic;color:var(--accent);}
 .hero p{font-size:17px;color:var(--muted);max-width:560px;margin:0 auto 40px;line-height:1.75;}
 .hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
-.btn-primary{
-  background:var(--ink);color:var(--white);
-  padding:14px 30px;border-radius:100px;
-  font-size:14px;font-weight:500;
-  text-decoration:none;transition:.2s;
-  display:inline-block;
-}
+.btn-primary{background:var(--ink);color:var(--white);padding:14px 30px;border-radius:100px;font-size:14px;font-weight:500;text-decoration:none;transition:.2s;display:inline-block;}
 .btn-primary:hover{background:var(--accent);transform:translateY(-1px);}
-.btn-outline{
-  background:transparent;color:var(--ink);
-  padding:13px 30px;border-radius:100px;
-  font-size:14px;font-weight:400;
-  text-decoration:none;border:1px solid var(--border);
-  transition:.2s;display:inline-block;
-}
+.btn-outline{background:transparent;color:var(--ink);padding:13px 30px;border-radius:100px;font-size:14px;font-weight:400;text-decoration:none;border:1px solid var(--border);transition:.2s;display:inline-block;}
 .btn-outline:hover{border-color:var(--ink);transform:translateY(-1px);}
 
-/* ── STATS ── */
-.stats{
-  display:flex;justify-content:center;
-  border-top:1px solid var(--border);
-  border-bottom:1px solid var(--border);
-}
-.stat{
-  flex:1;max-width:220px;text-align:center;
-  padding:30px 16px;
-  border-right:1px solid var(--border);
-}
+/* STATS */
+.stats{display:flex;justify-content:center;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.stat{flex:1;max-width:220px;text-align:center;padding:30px 16px;border-right:1px solid var(--border);}
 .stat:last-child{border-right:none;}
 .stat-num{font-family:'DM Serif Display',serif;font-size:38px;color:var(--ink);}
 .stat-label{font-size:12px;color:var(--muted);margin-top:4px;}
 
-/* ── SECTIONS ── */
+/* SECTIONS */
 .section{padding:80px 48px;max-width:1100px;margin:0 auto;}
-.section-tag{
-  font-size:11px;font-weight:500;
-  letter-spacing:2px;text-transform:uppercase;
-  color:var(--accent);margin-bottom:14px;
-}
-.section-title{
-  font-family:'DM Serif Display',serif;
-  font-size:clamp(28px,4vw,46px);
-  line-height:1.12;letter-spacing:-.5px;margin-bottom:16px;
-}
+.section-tag{font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:14px;}
+.section-title{font-family:'DM Serif Display',serif;font-size:clamp(28px,4vw,46px);line-height:1.12;letter-spacing:-.5px;margin-bottom:16px;}
 .section-sub{font-size:16px;color:var(--muted);max-width:520px;line-height:1.75;}
 
-/* ── SPEC CARDS ── */
+/* SPEC CARDS */
 .spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:48px;}
-.spec-card{
-  background:var(--soft);border:1px solid var(--border);
-  border-radius:20px;padding:32px;
-  transition:.25s;cursor:default;
-}
+.spec-card{background:var(--soft);border:1px solid var(--border);border-radius:20px;padding:32px;transition:.25s;cursor:default;}
 .spec-card:hover{transform:translateY(-3px);border-color:rgba(0,0,0,.14);box-shadow:var(--shadow);}
-.spec-icon{
-  width:46px;height:46px;border-radius:13px;
-  background:var(--white);display:flex;align-items:center;
-  justify-content:center;font-size:22px;
-  margin-bottom:20px;border:1px solid var(--border);
-}
+.spec-icon{width:46px;height:46px;border-radius:13px;background:var(--white);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:20px;border:1px solid var(--border);}
 .spec-card h3{font-size:17px;font-weight:500;margin-bottom:8px;}
 .spec-card p{font-size:14px;color:var(--muted);line-height:1.65;}
 
-/* ── PORTFOLIO ── */
+/* PORTFOLIO */
 .portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px;}
-.portfolio-card{
-  border-radius:20px;overflow:hidden;
-  border:1px solid var(--border);background:var(--card);
-  transition:.25s;text-decoration:none;color:inherit;display:block;
-}
+.portfolio-card{border-radius:20px;overflow:hidden;border:1px solid var(--border);background:var(--card);transition:.25s;text-decoration:none;color:inherit;display:block;}
 .portfolio-card:hover{transform:translateY(-4px);box-shadow:0 24px 64px rgba(0,0,0,.09);}
 .portfolio-img{height:210px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
 .portfolio-img.mayyah{background:linear-gradient(135deg,#12051f 0%,#1c0a2a 100%);}
 .portfolio-img.coming{background:linear-gradient(135deg,#f5f3ef 0%,#e8e4dd 100%);}
-.mock-browser{
-  width:80%;background:rgba(255,255,255,.05);
-  border-radius:10px;border:1px solid rgba(255,255,255,.1);overflow:hidden;
-}
+.mock-browser{width:80%;background:rgba(255,255,255,.05);border-radius:10px;border:1px solid rgba(255,255,255,.1);overflow:hidden;}
 .mock-bar{background:rgba(255,255,255,.07);padding:8px 12px;display:flex;align-items:center;gap:5px;}
 .mock-dot{width:7px;height:7px;border-radius:50%;}
 .mock-content{padding:14px;display:flex;flex-direction:column;gap:7px;}
@@ -179,81 +109,38 @@ nav{
 .portfolio-info h3{font-size:17px;font-weight:500;margin-bottom:4px;}
 .portfolio-info .portfolio-location{font-size:12px;color:var(--muted);margin-bottom:14px;}
 .portfolio-services{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;}
-.portfolio-service{
-  font-size:11px;padding:4px 10px;
-  background:var(--soft);border:1px solid var(--border);
-  border-radius:100px;color:var(--muted);
-}
+.portfolio-service{font-size:11px;padding:4px 10px;background:var(--soft);border:1px solid var(--border);border-radius:100px;color:var(--muted);}
 .portfolio-divider{height:1px;background:var(--border);margin:14px 0;}
 .portfolio-meta{display:flex;justify-content:space-between;align-items:center;}
 .portfolio-meta-label{font-size:11px;color:var(--muted);}
 .portfolio-meta-value{font-size:12px;font-weight:500;color:var(--ink);}
-.portfolio-link{
-  display:inline-flex;align-items:center;gap:5px;
-  font-size:12px;font-weight:500;color:var(--accent);
-  text-decoration:none;transition:.2s;
-}
+.portfolio-link{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:500;color:var(--accent);text-decoration:none;transition:.2s;}
 .portfolio-link:hover{color:var(--ink);}
-.portfolio-tag{
-  display:inline-block;margin-top:12px;
-  padding:5px 12px;background:var(--soft);
-  border-radius:100px;font-size:11px;
-  color:var(--muted);border:1px solid var(--border);
-}
-.portfolio-tag.dark{background:var(--ink);color:var(--white);border-color:var(--ink);}
-.portfolio-niche{
-  display:inline-block;
-  padding:4px 10px;border-radius:100px;
-  font-size:11px;font-weight:500;margin-bottom:10px;
-}
+.portfolio-niche{display:inline-block;padding:4px 10px;border-radius:100px;font-size:11px;font-weight:500;margin-bottom:10px;}
 .portfolio-niche.wellness{background:rgba(45,106,79,.08);color:var(--accent);border:1px solid rgba(45,106,79,.15);}
 .portfolio-niche.sport{background:rgba(26,26,46,.07);color:#1a1a2e;border:1px solid rgba(26,26,46,.15);}
 
-/* ── BLOG ── */
+/* BLOG */
 .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px;}
-.blog-card{
-  border:1px solid var(--border);border-radius:20px;
-  overflow:hidden;background:var(--card);transition:.25s;
-  text-decoration:none;color:inherit;display:block;
-}
+.blog-card{border:1px solid var(--border);border-radius:20px;overflow:hidden;background:var(--card);transition:.25s;text-decoration:none;color:inherit;display:block;}
 .blog-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
-.blog-number{
-  height:110px;display:flex;align-items:center;
-  justify-content:center;
-  font-family:'DM Serif Display',serif;
-  font-size:72px;font-weight:400;
-  letter-spacing:-2px;opacity:.08;color:var(--ink);
-}
+.blog-number{height:110px;display:flex;align-items:center;justify-content:center;font-family:'DM Serif Display',serif;font-size:72px;font-weight:400;letter-spacing:-2px;opacity:.08;color:var(--ink);}
 .blog-number.n1{background:linear-gradient(135deg,#e8f5e9,#f1f8f4);}
 .blog-number.n2{background:linear-gradient(135deg,#e3f0fb,#eef5fc);}
 .blog-number.n3{background:linear-gradient(135deg,#fef9ec,#fffbf2);}
 .blog-body{padding:22px 24px;}
-.blog-tag{
-  font-size:10px;font-weight:500;letter-spacing:1.5px;
-  text-transform:uppercase;color:var(--accent);
-  margin-bottom:10px;display:block;
-}
+.blog-tag{font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:10px;display:block;}
 .blog-card h3{font-size:16px;font-weight:500;line-height:1.4;margin-bottom:10px;}
 .blog-card p{font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:16px;}
-.blog-read{font-size:12px;font-weight:500;color:var(--accent);}
 .blog-divider{height:1px;background:var(--border);margin:10px 0 14px;}
 .blog-meta{font-size:11px;color:var(--muted);}
 
-/* ── PRICING ── */
+/* PRICING */
 .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px;}
-.price-card{
-  border:1px solid var(--border);border-radius:20px;
-  padding:30px;background:var(--card);
-  position:relative;transition:.25s;
-}
+.price-card{border:1px solid var(--border);border-radius:20px;padding:30px;background:var(--card);position:relative;transition:.25s;}
 .price-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);}
 .price-card.featured{background:var(--ink);border-color:var(--ink);color:var(--white);}
-.popular-badge{
-  position:absolute;top:-13px;left:50%;transform:translateX(-50%);
-  background:var(--accent);color:var(--white);
-  font-size:11px;font-weight:500;
-  padding:5px 16px;border-radius:100px;white-space:nowrap;
-}
+.popular-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--accent);color:var(--white);font-size:11px;font-weight:500;padding:5px 16px;border-radius:100px;white-space:nowrap;}
 .price-name{font-size:13px;font-weight:500;margin-bottom:8px;opacity:.65;}
 .price-card.featured .price-name{color:var(--white);}
 .price-amount{font-family:'DM Serif Display',serif;font-size:44px;letter-spacing:-1px;margin-bottom:4px;}
@@ -262,62 +149,32 @@ nav{
 .price-divider{height:1px;background:var(--border);margin:20px 0;}
 .price-card.featured .price-divider{background:rgba(255,255,255,.12);}
 .price-features{list-style:none;display:flex;flex-direction:column;gap:11px;}
-.price-features li{
-  font-size:13px;display:flex;align-items:center;
-  gap:9px;opacity:.85;
-}
-.price-features li::before{
-  content:'';width:15px;height:15px;border-radius:50%;
-  background:var(--accent2);flex-shrink:0;opacity:.85;
-}
-.price-cta{
-  display:block;text-align:center;margin-top:24px;
-  padding:12px;border-radius:100px;
-  font-size:13px;font-weight:500;
-  text-decoration:none;transition:.2s;
-  border:1px solid var(--border);color:var(--ink);
-  background:transparent;cursor:pointer;width:100%;
-  font-family:'DM Sans',sans-serif;
-}
+.price-features li{font-size:13px;display:flex;align-items:center;gap:9px;opacity:.85;}
+.price-features li::before{content:'';width:15px;height:15px;border-radius:50%;background:var(--accent2);flex-shrink:0;opacity:.85;}
+.price-cta{display:block;text-align:center;margin-top:24px;padding:12px;border-radius:100px;font-size:13px;font-weight:500;text-decoration:none;transition:.2s;border:1px solid var(--border);color:var(--ink);background:transparent;cursor:pointer;width:100%;font-family:'DM Sans',sans-serif;}
 .price-card.featured .price-cta{background:var(--white);color:var(--ink);border-color:transparent;}
 .price-cta:hover{background:var(--accent);color:var(--white);border-color:var(--accent);}
 
-/* ── ADD-ONS ── */
+/* ADD-ONS */
 .addons-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:36px;}
-.addon{
-  border:1px solid var(--border);border-radius:14px;
-  padding:18px 20px;background:var(--card);
-  display:flex;justify-content:space-between;align-items:center;
-}
+.addon{border:1px solid var(--border);border-radius:14px;padding:18px 20px;background:var(--card);display:flex;justify-content:space-between;align-items:center;}
 .addon-name{font-size:13px;font-weight:500;}
 .addon-price{font-size:14px;color:var(--accent);font-weight:500;}
 
-/* ── PROCESS ── */
-.process-steps{
-  display:grid;grid-template-columns:repeat(4,1fr);
-  gap:0;margin-top:48px;position:relative;
-}
-.process-steps::before{
-  content:'';position:absolute;top:28px;left:12%;right:12%;
-  height:1px;background:var(--border);z-index:0;
-}
+/* PROCESS */
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:48px;position:relative;}
+.process-steps::before{content:'';position:absolute;top:28px;left:12%;right:12%;height:1px;background:var(--border);z-index:0;}
 .step{text-align:center;padding:0 16px;position:relative;z-index:1;}
-.step-num{
-  width:56px;height:56px;border-radius:50%;
-  background:var(--white);border:1px solid var(--border);
-  display:flex;align-items:center;justify-content:center;
-  font-family:'DM Serif Display',serif;font-size:22px;
-  margin:0 auto 18px;color:var(--ink);
-}
+.step-num{width:56px;height:56px;border-radius:50%;background:var(--white);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:'DM Serif Display',serif;font-size:22px;margin:0 auto 18px;color:var(--ink);}
 .step h4{font-size:14px;font-weight:500;margin-bottom:6px;}
 .step p{font-size:12px;color:var(--muted);line-height:1.6;}
 
-/* ── TESTIMONIAL CAROUSEL ── */
+/* TESTIMONIAL CAROUSEL */
 .testimonial-section{background:var(--soft);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:70px 48px;text-align:center;}
 .testimonial-carousel{max-width:720px;margin:0 auto;position:relative;}
-.testimonial-track{overflow:hidden;}
-.testimonial-slides{display:flex;transition:transform .6s cubic-bezier(.4,0,.2,1);}
-.testimonial-slide{min-width:100%;padding:0 4px;}
+.testimonial-track{overflow:hidden;width:100%;}
+.testimonial-slides{display:flex;transition:transform .6s cubic-bezier(.4,0,.2,1);will-change:transform;}
+.testimonial-slide{flex:0 0 100%;width:100%;padding:0 4px;box-sizing:border-box;}
 .testimonial-card{background:var(--white);border:1px solid var(--border);border-radius:20px;padding:40px;text-align:left;}
 .quote-mark{font-family:'DM Serif Display',serif;font-size:60px;color:var(--accent);line-height:.6;margin-bottom:20px;opacity:.25;}
 .testimonial-text{font-family:'DM Serif Display',serif;font-size:clamp(16px,2.5vw,22px);line-height:1.5;letter-spacing:-.2px;color:var(--ink);margin-bottom:24px;font-style:italic;}
@@ -330,7 +187,7 @@ nav{
 .testimonial-dot{width:8px;height:8px;border-radius:50%;background:var(--border);border:none;cursor:pointer;transition:.3s;padding:0;}
 .testimonial-dot.active{background:var(--accent);width:24px;border-radius:4px;}
 
-/* ── CONTACT FORM ── */
+/* CONTACT FORM */
 .contact-section{padding:80px 48px;max-width:1100px;margin:0 auto;}
 .contact-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:48px;align-items:start;margin-top:48px;}
 .contact-info h3{font-family:'DM Serif Display',serif;font-size:24px;margin-bottom:16px;}
@@ -352,40 +209,18 @@ nav{
 .form-success{display:none;text-align:center;padding:24px;background:#e8f5e9;border-radius:14px;color:#1b4332;font-size:14px;margin-top:16px;}
 .form-success.show{display:block;}
 
-/* ── CTA SECTION ── */
-.cta-section{
-  margin:0 48px 80px;
-  background:var(--ink);border-radius:24px;
-  padding:64px 48px;text-align:center;color:var(--white);
-}
-.cta-section h2{
-  font-family:'DM Serif Display',serif;
-  font-size:clamp(28px,4vw,50px);
-  letter-spacing:-.5px;margin-bottom:16px;
-}
+/* CTA */
+.cta-section{margin:0 48px 80px;background:var(--ink);border-radius:24px;padding:64px 48px;text-align:center;color:var(--white);}
+.cta-section h2{font-family:'DM Serif Display',serif;font-size:clamp(28px,4vw,50px);letter-spacing:-.5px;margin-bottom:16px;}
 .cta-section p{opacity:.55;font-size:16px;margin-bottom:34px;}
 .cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
-.btn-white{
-  background:var(--white);color:var(--ink);
-  padding:14px 30px;border-radius:100px;
-  font-size:14px;font-weight:500;
-  text-decoration:none;transition:.2s;display:inline-block;
-}
+.btn-white{background:var(--white);color:var(--ink);padding:14px 30px;border-radius:100px;font-size:14px;font-weight:500;text-decoration:none;transition:.2s;display:inline-block;}
 .btn-white:hover{background:var(--accent2);color:var(--white);transform:translateY(-1px);}
-.btn-ghost{
-  background:transparent;color:var(--white);
-  padding:13px 30px;border-radius:100px;font-size:14px;
-  border:1px solid rgba(255,255,255,.2);
-  text-decoration:none;transition:.2s;display:inline-block;
-}
+.btn-ghost{background:transparent;color:var(--white);padding:13px 30px;border-radius:100px;font-size:14px;border:1px solid rgba(255,255,255,.2);text-decoration:none;transition:.2s;display:inline-block;}
 .btn-ghost:hover{border-color:rgba(255,255,255,.6);transform:translateY(-1px);}
 
-/* ── FOOTER ── */
-footer{
-  border-top:1px solid var(--border);
-  padding:32px 48px;
-  display:flex;justify-content:space-between;align-items:center;
-}
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;justify-content:space-between;align-items:center;}
 .footer-logo{font-family:'DM Serif Display',serif;font-size:18px;color:var(--ink);text-decoration:none;}
 .footer-logo span{color:var(--accent);}
 .footer-links{display:flex;gap:24px;list-style:none;}
@@ -393,7 +228,7 @@ footer{
 .footer-links a:hover{color:var(--ink);}
 .footer-copy{font-size:12px;color:var(--muted);}
 
-/* ── RESPONSIVE ── */
+/* RESPONSIVE */
 @media(max-width:768px){
   nav{padding:14px 20px;}
   .nav-links{display:none;}
@@ -407,6 +242,7 @@ footer{
   .addons-grid{grid-template-columns:1fr 1fr;}
   .process-steps{grid-template-columns:1fr 1fr;gap:24px;}
   .process-steps::before{display:none;}
+  .blog-grid{grid-template-columns:1fr;}
   .testimonial-section{padding:50px 20px;}
   .contact-section{padding:60px 20px;}
   .contact-grid{grid-template-columns:1fr;}
@@ -430,12 +266,12 @@ footer{
       <defs>
         <style>
           @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=DM+Sans:wght@300;400;500&amp;display=swap');
-          .logo-text-main { font-family: 'DM Serif Display', serif; font-size: 52px; fill: #0f0f0f; letter-spacing: -1px; }
-          .logo-text-sub { font-family: 'DM Sans', sans-serif; font-size: 13px; fill: #6b6b6b; letter-spacing: 4px; font-weight: 400; }
-          .logo-text-accent { fill: #2d6a4f; }
+          .logo-text-main{font-family:'DM Serif Display',serif;font-size:52px;fill:#0f0f0f;letter-spacing:-1px;}
+          .logo-text-sub{font-family:'DM Sans',sans-serif;font-size:13px;fill:#6b6b6b;letter-spacing:4px;font-weight:400;}
+          .logo-text-accent{fill:#2d6a4f;}
         </style>
       </defs>
-      <g transform="translate(20, 100)">
+      <g transform="translate(20,100)">
         <rect x="0" y="-52" width="104" height="104" rx="24" fill="#2d6a4f"/>
         <rect x="26" y="-26" width="52" height="18" rx="4" fill="#52b788"/>
         <rect x="26" y="-2" width="38" height="18" rx="4" fill="#52b788" opacity="0.7"/>
@@ -470,7 +306,6 @@ footer{
     <a class="btn-outline" href="#portfolio">Portfolio ansehen</a>
   </div>
 </section>
-
 
 <!-- STATS -->
 <div class="stats">
@@ -528,7 +363,6 @@ footer{
   <p class="section-sub">Zwei abgeschlossene Projekte – von Wellness bis Sport. Professionelle Ergebnisse die für sich sprechen.</p>
   <div class="portfolio-grid">
 
-    <!-- Mayyah -->
     <a class="portfolio-card" href="https://contactteamhag-tech.github.io/Mayyah-thaimassage/" target="_blank" rel="noopener">
       <div class="portfolio-img mayyah">
         <div class="mock-browser">
@@ -560,20 +394,13 @@ footer{
         </div>
         <div class="portfolio-divider"></div>
         <div class="portfolio-meta">
-          <div>
-            <div class="portfolio-meta-label">Lieferzeit</div>
-            <div class="portfolio-meta-value">7 Tage</div>
-          </div>
-          <div>
-            <div class="portfolio-meta-label">Paket</div>
-            <div class="portfolio-meta-value">Starter</div>
-          </div>
+          <div><div class="portfolio-meta-label">Lieferzeit</div><div class="portfolio-meta-value">7 Tage</div></div>
+          <div><div class="portfolio-meta-label">Paket</div><div class="portfolio-meta-value">Starter</div></div>
           <span class="portfolio-link">Website ansehen →</span>
         </div>
       </div>
     </a>
 
-    <!-- Hybrid Athletes -->
     <a class="portfolio-card" href="https://contactteamhag-tech.github.io/hybrid-athletes.official/" target="_blank" rel="noopener">
       <div class="portfolio-img" style="background:linear-gradient(135deg,#0a0a0a 0%,#1a1a2e 100%);">
         <div class="mock-browser">
@@ -605,20 +432,13 @@ footer{
         </div>
         <div class="portfolio-divider"></div>
         <div class="portfolio-meta">
-          <div>
-            <div class="portfolio-meta-label">Lieferzeit</div>
-            <div class="portfolio-meta-value">10 Tage</div>
-          </div>
-          <div>
-            <div class="portfolio-meta-label">Paket</div>
-            <div class="portfolio-meta-value">Starter</div>
-          </div>
+          <div><div class="portfolio-meta-label">Lieferzeit</div><div class="portfolio-meta-value">10 Tage</div></div>
+          <div><div class="portfolio-meta-label">Paket</div><div class="portfolio-meta-value">Starter</div></div>
           <span class="portfolio-link">Website ansehen →</span>
         </div>
       </div>
     </a>
 
-    <!-- Next Project -->
     <div class="portfolio-card" style="cursor:default;">
       <div class="portfolio-img coming">
         <div class="coming-text">
@@ -638,14 +458,8 @@ footer{
         </div>
         <div class="portfolio-divider"></div>
         <div class="portfolio-meta">
-          <div>
-            <div class="portfolio-meta-label">Ab</div>
-            <div class="portfolio-meta-value">999€</div>
-          </div>
-          <div>
-            <div class="portfolio-meta-label">Lieferzeit</div>
-            <div class="portfolio-meta-value">7–10 Tage</div>
-          </div>
+          <div><div class="portfolio-meta-label">Ab</div><div class="portfolio-meta-value">999€</div></div>
+          <div><div class="portfolio-meta-label">Lieferzeit</div><div class="portfolio-meta-value">7–10 Tage</div></div>
           <a class="portfolio-link" href="https://wa.me/4915777599801">Jetzt anfragen →</a>
         </div>
       </div>
@@ -660,7 +474,6 @@ footer{
   <h2 class="section-title">Transparent &amp; fair</h2>
   <p class="section-sub">Einmalige Investition – keine versteckten Kosten, kein Abo-Zwang.</p>
   <div class="pricing-grid">
-
     <div class="price-card">
       <div class="price-name">Starter</div>
       <div class="price-amount">999€</div>
@@ -677,7 +490,6 @@ footer{
       </ul>
       <a class="price-cta" href="https://wa.me/4915777599801">Jetzt starten →</a>
     </div>
-
     <div class="price-card featured">
       <div class="popular-badge">Empfohlen</div>
       <div class="price-name">Professional</div>
@@ -695,7 +507,6 @@ footer{
       </ul>
       <a class="price-cta" href="https://wa.me/4915777599801">Jetzt starten →</a>
     </div>
-
     <div class="price-card">
       <div class="price-name">Premium</div>
       <div class="price-amount">1.499€</div>
@@ -712,10 +523,8 @@ footer{
       </ul>
       <a class="price-cta" href="https://wa.me/4915777599801">Jetzt starten →</a>
     </div>
-
   </div>
 
-  <!-- ADD-ONS -->
   <div style="margin-top:48px">
     <h3 style="font-family:'DM Serif Display',serif;font-size:24px;margin-bottom:8px;">Add-Ons</h3>
     <p style="font-size:14px;color:var(--muted);margin-bottom:0;">Einzeln buchbar zu jedem Paket.</p>
@@ -729,8 +538,7 @@ footer{
     <div class="addon"><span class="addon-name">Express-Lieferung (&lt;7 Tage)</span><span class="addon-price">+30%</span></div>
   </div>
 
-  <!-- HOSTING -->
-  <div style="margin-top:32px;background:var(--soft);border:1px solid var(--border);border-radius:18px;padding:24px 28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+  <div style="margin-top:36px;border:1px solid var(--border);border-radius:16px;padding:24px 28px;background:var(--card);display:flex;justify-content:space-between;align-items:center;">
     <div>
       <h4 style="font-size:15px;font-weight:500;margin-bottom:4px;">Monatliches Hosting &amp; Wartung</h4>
       <p style="font-size:13px;color:var(--muted);">Hosting, SSL, Backups, Updates &amp; technischer Support</p>
@@ -742,8 +550,8 @@ footer{
   </div>
 </section>
 
-<!-- PROCESS -->
-<section class="section" style="padding-top:0" id="ablauf">
+<!-- ABLAUF -->
+<section class="section" id="ablauf" style="padding-top:0">
   <div class="section-tag">Ablauf</div>
   <h2 class="section-title">So einfach geht's</h2>
   <p class="section-sub">Von der ersten Anfrage bis zur fertigen Website in 4 Schritten.</p>
@@ -766,7 +574,7 @@ footer{
     <div class="step">
       <div class="step-num">4</div>
       <h4>Launch 🚀</h4>
-      <p>Ihre Website geht live – inklusive persönlicher Einweisung</p>
+      <p>Deine Website geht live – inklusive persönlicher Einweisung</p>
     </div>
   </div>
 </section>
@@ -777,7 +585,6 @@ footer{
   <h2 class="section-title">Warum du eine Website brauchst</h2>
   <p class="section-sub">Drei Gründe, warum lokale Businesses ohne Website täglich Kunden an die Konkurrenz verlieren.</p>
   <div class="blog-grid">
-
     <div class="blog-card">
       <div class="blog-number n1">1</div>
       <div class="blog-body">
@@ -785,12 +592,9 @@ footer{
         <h3>Ohne Website existierst du bei Google nicht</h3>
         <p>Jeden Tag suchen hunderte Menschen in Köln und Umgebung nach „Massagestudio Köln", „Personal Trainer NRW" oder „Yogakurs Köln". Wer keine eigene Website hat, taucht in diesen Suchergebnissen schlicht nicht auf – egal wie gut das Studio oder Angebot wirklich ist. Die Konkurrenz, die online präsent ist, bekommt diese Kunden stattdessen.</p>
         <div class="blog-divider"></div>
-        <div class="blog-meta">
-          <span>📍 Lokal · SEO</span>
-        </div>
+        <div class="blog-meta"><span>📍 Lokal · SEO</span></div>
       </div>
     </div>
-
     <div class="blog-card">
       <div class="blog-number n2">2</div>
       <div class="blog-body">
@@ -798,12 +602,9 @@ footer{
         <h3>Eine professionelle Website verwandelt Besucher in Kunden</h3>
         <p>Über 80 % der Menschen recherchieren online, bevor sie ein lokales Unternehmen besuchen oder kontaktieren. Eine Website mit klaren Preisen, echten Fotos und einfacher Buchungsmöglichkeit schafft sofort Vertrauen – noch bevor der erste Anruf stattfindet. Fehlt diese Grundlage, entscheiden sich die meisten Interessenten still und leise für jemand anderen.</p>
         <div class="blog-divider"></div>
-        <div class="blog-meta">
-          <span>💼 Conversion · Design</span>
-        </div>
+        <div class="blog-meta"><span>💼 Conversion · Design</span></div>
       </div>
     </div>
-
     <div class="blog-card">
       <div class="blog-number n3">3</div>
       <div class="blog-body">
@@ -811,19 +612,16 @@ footer{
         <h3>Deine Website arbeitet 24/7 – auch wenn du schläfst</h3>
         <p>Ein Instagram-Post hat eine Halbwertszeit von 24 Stunden. Eine gut aufgebaute Website hingegen bringt dir Monate und Jahre nach dem Launch noch neue Anfragen – vollautomatisch, ohne laufende Werbekosten. Kombiniert mit Google Business und einem einfachen Buchungsformular wird deine Website zum stärksten Vertriebsmitarbeiter, den du je hattest.</p>
         <div class="blog-divider"></div>
-        <div class="blog-meta">
-          <span>📈 Marketing · Automatisierung</span>
-        </div>
+        <div class="blog-meta"><span>📈 Marketing · Automatisierung</span></div>
       </div>
     </div>
-
   </div>
 </section>
 
 <!-- TESTIMONIAL -->
 <div class="testimonial-section">
   <div class="testimonial-carousel">
-    <div class="testimonial-track">
+    <div class="testimonial-track" id="testimonial-track">
       <div class="testimonial-slides" id="testimonial-slides">
         <div class="testimonial-slide">
           <div class="testimonial-card">
@@ -843,14 +641,14 @@ footer{
         </div>
       </div>
     </div>
-    <div class="testimonial-dots" id="testimonial-dots">
-      <button class="testimonial-dot active"></button>
-      <button class="testimonial-dot"></button>
+    <div class="testimonial-dots">
+      <button class="testimonial-dot active" id="dot-0"></button>
+      <button class="testimonial-dot" id="dot-1"></button>
     </div>
   </div>
 </div>
 
-<!-- KONTAKT FORMULAR -->
+<!-- KONTAKT -->
 <section class="contact-section" id="kontakt">
   <div class="section-tag">Kontakt</div>
   <h2 class="section-title">Schreib uns direkt</h2>
@@ -870,7 +668,7 @@ footer{
         <div class="contact-detail-icon">📧</div>
         <div class="contact-detail-text">
           <strong>E-Mail</strong>
-          <a href="/cdn-cgi/l/email-protection#81e8efe7eec1fbe4eff6e4e3f2f5f4e5e8eeafe5e4" style="color:var(--accent);text-decoration:none;"><span class="__cf_email__" data-cfemail="c6afa8a0a986bca3a8b1a3a4b5b2b3a2afa9e8a2a3">[email&#160;protected]</span></a>
+          <a href="mailto:info@zenwebstudio.de" style="color:var(--accent);text-decoration:none;">info@zenwebstudio.de</a>
         </div>
       </div>
       <div class="contact-detail">
@@ -933,7 +731,7 @@ footer{
 </section>
 
 <!-- CTA -->
-<section class="cta-section" id="kontakt">
+<section class="cta-section">
   <h2>Bereit für deinen nächsten<br/>digitalen Auftritt?</h2>
   <p>Kostenlose Beratung – unverbindlich, ohne Risiko. Für Wellness, Sport &amp; Lifestyle.</p>
   <div class="cta-btns">
@@ -953,30 +751,52 @@ footer{
   <p class="footer-copy">© 2025 ZenWeb Studio · Wellness, Sport &amp; Lifestyle · Köln</p>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  document.addEventListener('DOMContentLoaded', function(){
-    let current = 0;
-    const slides = document.getElementById('testimonial-slides');
-    const dots = document.querySelectorAll('.testimonial-dot');
-    const total = dots.length;
-    if(!slides || total === 0) return;
-    function goToSlide(n){
-      current = (n + total) % total;
-      slides.style.transform = 'translateX(-'+(current*100)+'%)';
-      dots.forEach((d,i) => d.classList.toggle('active', i===current));
-    }
-    dots.forEach((d,i) => d.addEventListener('click', () => goToSlide(i)));
-    setInterval(() => goToSlide(current + 1), 4000);
-  });
+<script>
+// CAROUSEL
+var track   = document.getElementById('testimonial-track');
+var slides  = document.getElementById('testimonial-slides');
+var dot0    = document.getElementById('dot-0');
+var dot1    = document.getElementById('dot-1');
+var current = 0;
 
-  const form = document.getElementById('contact-form');
-  if(form){
-    form.addEventListener('submit', async function(e){
-      e.preventDefault();
-      const btn = form.querySelector('.form-submit');
-      btn.textContent = 'Wird gesendet...';
-      btn.disabled = true;
-      const response = await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
-      if(response.ok){
+function goToSlide(n) {
+  current = n;
+  slides.style.transform = 'translateX(-' + (current * track.offsetWidth) + 'px)';
+  dot0.classList.toggle('active', current === 0);
+  dot1.classList.toggle('active', current === 1);
+}
+
+dot0.addEventListener('click', function() { goToSlide(0); });
+dot1.addEventListener('click', function() { goToSlide(1); });
+setInterval(function() { goToSlide(current === 0 ? 1 : 0); }, 4000);
+
+// CONTACT FORM
+var form = document.getElementById('contact-form');
+if (form) {
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var btn = form.querySelector('.form-submit');
+    btn.textContent = 'Wird gesendet...';
+    btn.disabled = true;
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function(res) {
+      if (res.ok) {
         form.reset();
-        document.getEl
+        document.getElementById('form-success').classList.add('show');
+      } else {
+        btn.textContent = 'Fehler – bitte erneut versuchen';
+        btn.disabled = false;
+      }
+    }).catch(function() {
+      btn.textContent = 'Fehler – bitte erneut versuchen';
+      btn.disabled = false;
+    });
+  });
+}
+</script>
+
+</body>
+</html>
