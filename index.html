@@ -173,8 +173,8 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:18px 4
 .testimonial-section{background:var(--soft);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:70px 48px;text-align:center;}
 .testimonial-carousel{max-width:720px;margin:0 auto;position:relative;}
 .testimonial-track{overflow:hidden;width:100%;}
-.testimonial-slides{display:flex;transition:transform .6s cubic-bezier(.4,0,.2,1);will-change:transform;}
-.testimonial-slide{flex:0 0 100%;width:100%;padding:0 4px;box-sizing:border-box;}
+.testimonial-slides{display:flex;width:200%;transition:transform .6s cubic-bezier(.4,0,.2,1);will-change:transform;}
+.testimonial-slide{width:50%;box-sizing:border-box;padding:0 4px;}
 .testimonial-card{background:var(--white);border:1px solid var(--border);border-radius:20px;padding:40px;text-align:left;}
 .quote-mark{font-family:'DM Serif Display',serif;font-size:60px;color:var(--accent);line-height:.6;margin-bottom:20px;opacity:.25;}
 .testimonial-text{font-family:'DM Serif Display',serif;font-size:clamp(16px,2.5vw,22px);line-height:1.5;letter-spacing:-.2px;color:var(--ink);margin-bottom:24px;font-style:italic;}
@@ -754,7 +754,6 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;justify
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // CAROUSEL
-var track   = document.getElementById('testimonial-track');
 var slides  = document.getElementById('testimonial-slides');
 var dot0    = document.getElementById('dot-0');
 var dot1    = document.getElementById('dot-1');
@@ -762,7 +761,7 @@ var current = 0;
 
 function goToSlide(n) {
   current = n;
-  slides.style.transform = 'translateX(-' + (current * track.offsetWidth) + 'px)';
+  slides.style.transform = current === 0 ? 'translateX(0)' : 'translateX(-50%)';
   dot0.classList.toggle('active', current === 0);
   dot1.classList.toggle('active', current === 1);
 }
