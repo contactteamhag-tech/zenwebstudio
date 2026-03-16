@@ -52,7 +52,32 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:18px 4
 .nav-cta{background:var(--ink);color:var(--white);padding:9px 20px;border-radius:100px;font-size:13px;font-weight:500;text-decoration:none;transition:.2s;}
 .nav-cta:hover{background:var(--accent);}
 
-/* HERO */
+/* HAMBURGER */
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:36px;height:36px;background:none;border:none;cursor:pointer;padding:4px;}
+.nav-hamburger span{display:block;height:2px;width:22px;background:var(--ink);border-radius:2px;transition:transform .3s,opacity .3s;}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.nav-hamburger.open span:nth-child(2){opacity:0;}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+/* MOBILE MENU */
+.mobile-menu{
+  display:none;flex-direction:column;gap:0;
+  position:fixed;top:0;left:0;right:0;bottom:0;
+  background:var(--white);z-index:99;
+  padding:100px 32px 48px;
+}
+.mobile-menu.open{display:flex;}
+.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:0;flex:1;}
+.mobile-menu ul li{border-bottom:1px solid var(--border);}
+.mobile-link{display:block;font-family:'DM Serif Display',serif;font-size:32px;color:var(--ink);text-decoration:none;padding:18px 0;transition:.2s;letter-spacing:-.3px;}
+.mobile-link:hover{color:var(--accent);}
+.mobile-cta{display:block;text-align:center;background:var(--ink);color:var(--white);padding:16px;border-radius:100px;font-size:15px;font-weight:500;text-decoration:none;transition:.2s;margin-top:32px;}
+.mobile-cta:hover{background:var(--accent);}
+
+@media(max-width:768px){
+  .nav-hamburger{display:flex;}
+  .nav-cta{display:none;}
+}
 .hero{padding:100px 48px 90px;max-width:920px;margin:0 auto;text-align:center;}
 .hero-badge{display:inline-flex;align-items:center;gap:6px;background:var(--soft);border:1px solid var(--border);padding:6px 16px;border-radius:100px;font-size:12px;color:var(--muted);margin-bottom:30px;}
 .hero-badge span{width:7px;height:7px;border-radius:50%;background:var(--accent2);display:inline-block;animation:pulse 2s infinite;}
@@ -291,7 +316,22 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;justify
     <li><a href="#kontakt">Kontakt</a></li>
   </ul>
   <a class="nav-cta" href="#kontakt">Jetzt anfragen →</a>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menü öffnen">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <ul>
+    <li><a href="#leistungen" class="mobile-link">Leistungen</a></li>
+    <li><a href="#portfolio" class="mobile-link">Portfolio</a></li>
+    <li><a href="#preise" class="mobile-link">Preise</a></li>
+    <li><a href="#blog" class="mobile-link">Blog</a></li>
+    <li><a href="#kontakt" class="mobile-link">Kontakt</a></li>
+  </ul>
+  <a class="mobile-cta" href="#kontakt">Jetzt anfragen →</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -753,6 +793,25 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;justify
 </footer>
 
 <script>
+// HAMBURGER MENU
+var hamburger = document.getElementById('nav-hamburger');
+var mobileMenu = document.getElementById('mobile-menu');
+var mobileLinks = document.querySelectorAll('.mobile-link, .mobile-cta');
+
+hamburger.addEventListener('click', function() {
+  hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+  document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+});
+
+mobileLinks.forEach(function(link) {
+  link.addEventListener('click', function() {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+  });
+});
+
 // CAROUSEL
 var slides  = document.getElementById('testimonial-slides');
 var dot0    = document.getElementById('dot-0');
