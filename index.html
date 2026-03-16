@@ -669,7 +669,7 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;justify
         <div class="contact-detail-icon">📧</div>
         <div class="contact-detail-text">
           <strong>E-Mail</strong>
-          <a href="/cdn-cgi/l/email-protection#99f0f7fff6d9e3fcf7eefcfbeaedecfdf0f6b7fdfc" style="color:var(--accent);text-decoration:none;"><span class="__cf_email__" data-cfemail="620b0c040d2218070c150700111617060b0d4c0607">[email&#160;protected]</span></a>
+          <a href="mailto:info@zenwebstudio.de" style="color:var(--accent);text-decoration:none;">info@zenwebstudio.de</a>
         </div>
       </div>
       <div class="contact-detail">
@@ -752,7 +752,7 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;justify
   <p class="footer-copy">© 2025 ZenWeb Studio · Wellness, Sport, Restaurants &amp; Lifestyle · Köln</p>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 // CAROUSEL
 var slides  = document.getElementById('testimonial-slides');
 var dot0    = document.getElementById('dot-0');
@@ -785,6 +785,17 @@ if (form) {
     }).then(function(res) {
       if (res.ok) {
         form.reset();
-        document.getElementById('form-success').classList.add('show');
-      } else {
-        btn.te
+        document.getElementById('form-success').classList.add('show');      } else {
+        btn.textContent = 'Fehler – bitte erneut versuchen';
+        btn.disabled = false;
+      }
+    }).catch(function() {
+      btn.textContent = 'Fehler – bitte erneut versuchen';
+      btn.disabled = false;
+    });
+  });
+}
+</script>
+
+</body>
+</html>
