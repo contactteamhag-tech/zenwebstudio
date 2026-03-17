@@ -196,10 +196,12 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:18px 4
 
 /* TESTIMONIAL CAROUSEL */
 .testimonial-section{background:var(--soft);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:70px 48px;text-align:center;}
-.testimonial-carousel{max-width:720px;margin:0 auto;position:relative;}
-.testimonial-track{overflow:hidden;width:100%;}
-.testimonial-slides{display:flex;width:200%;transition:transform .6s cubic-bezier(.4,0,.2,1);will-change:transform;}
-.testimonial-slide{width:50%;box-sizing:border-box;padding:0 4px;}
+.testimonial-carousel{max-width:720px;margin:0 auto;}
+.t-track{display:grid;}
+.t-slide{grid-area:1/1;opacity:0;transform:translateY(12px);transition:opacity .5s ease,transform .5s ease;pointer-events:none;visibility:hidden;}
+.t-slide.t-on{opacity:1;transform:translateY(0);pointer-events:auto;visibility:visible;}
+.t-dot{width:8px;height:8px;border-radius:50%;background:rgba(0,0,0,.15);border:none;cursor:pointer;transition:.3s;padding:0;display:inline-block;}
+.t-dot.t-on{background:var(--accent);width:24px;border-radius:4px;}
 .testimonial-card{background:var(--white);border:1px solid var(--border);border-radius:20px;padding:40px;text-align:left;}
 .quote-mark{font-family:'DM Serif Display',serif;font-size:60px;color:var(--accent);line-height:.6;margin-bottom:20px;opacity:.25;}
 .testimonial-text{font-family:'DM Serif Display',serif;font-size:clamp(16px,2.5vw,22px);line-height:1.5;letter-spacing:-.2px;color:var(--ink);margin-bottom:24px;font-style:italic;}
@@ -209,8 +211,6 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:18px 4
 .testimonial-niche.wellness{background:rgba(45,106,79,.08);color:var(--accent);border:1px solid rgba(45,106,79,.15);}
 .testimonial-niche.sport{background:rgba(26,26,46,.07);color:#1a1a2e;border:1px solid rgba(26,26,46,.15);}
 .testimonial-dots{display:flex;justify-content:center;gap:8px;margin-top:28px;}
-.testimonial-dot{width:8px;height:8px;border-radius:50%;background:var(--border);border:none;cursor:pointer;transition:.3s;padding:0;}
-.testimonial-dot.active{background:var(--accent);width:24px;border-radius:4px;}
 
 /* CONTACT FORM */
 .contact-section{padding:80px 48px;max-width:1100px;margin:0 auto;}
@@ -662,32 +662,51 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;justify
 <!-- TESTIMONIAL -->
 <div class="testimonial-section">
   <div class="testimonial-carousel">
-    <div class="testimonial-track" id="testimonial-track">
-      <div class="testimonial-slides" id="testimonial-slides">
-        <div class="testimonial-slide">
-          <div class="testimonial-card">
-            <span class="testimonial-niche wellness">Wellness</span>
-            <div class="quote-mark">"</div>
-            <p class="testimonial-text">Seit unsere Website online ist, bekommen wir deutlich mehr Anfragen. Die Zusammenarbeit war unkompliziert, schnell und das Ergebnis hat unsere Erwartungen übertroffen.</p>
-            <p class="testimonial-author"><strong>Mayyah Thaimassage</strong> · Odenthal</p>
-          </div>
-        </div>
-        <div class="testimonial-slide">
-          <div class="testimonial-card">
-            <span class="testimonial-niche sport">Sport &amp; Community</span>
-            <div class="quote-mark">"</div>
-            <p class="testimonial-text">ZenWeb Studio hat unsere Community-Website professionell und schnell umgesetzt. Der Auftritt passt perfekt zu unserer Marke – wir sind sehr zufrieden.</p>
-            <p class="testimonial-author"><strong>Hybrid Athletes</strong> · Köln &amp; Siegen</p>
-          </div>
-        </div>
+    <div class="t-track">
+    <div class="t-slide t-on" id="ts0">
+      <div class="testimonial-card">
+        <span class="testimonial-niche wellness">Wellness</span>
+        <div class="quote-mark">"</div>
+        <p class="testimonial-text">Seit unsere Website online ist, bekommen wir deutlich mehr Anfragen. Die Zusammenarbeit war unkompliziert, schnell und das Ergebnis hat unsere Erwartungen übertroffen.</p>
+        <p class="testimonial-author"><strong>Mayyah Thaimassage</strong> · Odenthal</p>
       </div>
     </div>
-    <div class="testimonial-dots">
-      <button class="testimonial-dot active" id="dot-0"></button>
-      <button class="testimonial-dot" id="dot-1"></button>
+    <div class="t-slide" id="ts1">
+      <div class="testimonial-card">
+        <span class="testimonial-niche sport">Sport &amp; Community</span>
+        <div class="quote-mark">"</div>
+        <p class="testimonial-text">ZenWeb Studio hat unsere Community-Website professionell und schnell umgesetzt. Der Auftritt passt perfekt zu unserer Marke – wir sind sehr zufrieden.</p>
+        <p class="testimonial-author"><strong>Hybrid Athletes</strong> · Köln &amp; Siegen</p>
+      </div>
+    </div>
+    </div>
+    <div class="testimonial-dots" style="margin-top:28px;">
+      <button class="t-dot t-on" id="td0"></button>
+      <button class="t-dot" id="td1"></button>
     </div>
   </div>
 </div>
+<script>
+!function(){
+  var s=[document.getElementById('ts0'),document.getElementById('ts1')];
+  var d=[document.getElementById('td0'),document.getElementById('td1')];
+  var cur=0, tmr=null;
+  function go(n){
+    s[cur].className='t-slide';
+    d[cur].className='t-dot';
+    cur=n;
+    s[cur].className='t-slide t-on';
+    d[cur].className='t-dot t-on';
+  }
+  function run(){
+    if(tmr)clearInterval(tmr);
+    tmr=setInterval(function(){go(cur===0?1:0);},4000);
+  }
+  d[0].onclick=function(){go(0);run();};
+  d[1].onclick=function(){go(1);run();};
+  run();
+}();
+</script>
 
 <!-- KONTAKT -->
 <section class="contact-section" id="kontakt">
@@ -709,7 +728,7 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;justify
         <div class="contact-detail-icon">📧</div>
         <div class="contact-detail-text">
           <strong>E-Mail</strong>
-          <a href="mailto:info@zenwebstudio.de" style="color:var(--accent);text-decoration:none;">info@zenwebstudio.de</a>
+          <a href="/cdn-cgi/l/email-protection#127b7c747d5268777c657770616667767b7d3c7677" style="color:var(--accent);text-decoration:none;"><span class="__cf_email__" data-cfemail="056c6b636a457f606b726067767170616c6a2b6160">[email&#160;protected]</span></a>
         </div>
       </div>
       <div class="contact-detail">
@@ -754,6 +773,7 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;justify
             <option value="" disabled selected>Bitte wählen...</option>
             <option>Massagestudio / Wellness</option>
             <option>Sportverein / Fitnessstudio</option>
+            <option>Restaurant / Gastronomie</option>
             <option>Lifestyle Brand</option>
             <option>Anderes</option>
           </select>
@@ -789,10 +809,10 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;justify
     <li><a href="impressum.html#datenschutz">Datenschutz</a></li>
     <li><a href="https://wa.me/4915777599801">Kontakt</a></li>
   </ul>
-  <p class="footer-copy">© 2025 ZenWeb Studio · Wellness, Sport, Restaurants &amp; Lifestyle · Köln</p>
+  <p class="footer-copy">© 2026 ZenWeb Studio · Wellness, Sport, Restaurants &amp; Lifestyle · Köln</p>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // HAMBURGER MENU
 var hamburger = document.getElementById('nav-hamburger');
 var mobileMenu = document.getElementById('mobile-menu');
@@ -812,22 +832,7 @@ mobileLinks.forEach(function(link) {
   });
 });
 
-// CAROUSEL
-var slides  = document.getElementById('testimonial-slides');
-var dot0    = document.getElementById('dot-0');
-var dot1    = document.getElementById('dot-1');
-var current = 0;
-
-function goToSlide(n) {
-  current = n;
-  slides.style.transform = current === 0 ? 'translateX(0)' : 'translateX(-50%)';
-  dot0.classList.toggle('active', current === 0);
-  dot1.classList.toggle('active', current === 1);
-}
-
-dot0.addEventListener('click', function() { goToSlide(0); });
-dot1.addEventListener('click', function() { goToSlide(1); });
-setInterval(function() { goToSlide(current === 0 ? 1 : 0); }, 4000);
+// CAROUSEL → inline script direkt im HTML
 
 // CONTACT FORM
 var form = document.getElementById('contact-form');
@@ -845,16 +850,4 @@ if (form) {
       if (res.ok) {
         form.reset();
         document.getElementById('form-success').classList.add('show');      } else {
-        btn.textContent = 'Fehler – bitte erneut versuchen';
-        btn.disabled = false;
-      }
-    }).catch(function() {
-      btn.textContent = 'Fehler – bitte erneut versuchen';
-      btn.disabled = false;
-    });
-  });
-}
-</script>
-
-</body>
-</html>
+        btn.te
